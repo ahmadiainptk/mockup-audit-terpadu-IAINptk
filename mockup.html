@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipe Aplikasi Asesmen</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat ikon Heroicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Menggunakan font Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Sembunyikan semua section mockup secara default */
+        .mockup-section {
+            display: none;
+        }
+        /* Tampilkan section yang aktif */
+        .mockup-section.active {
+            display: block;
+        }
+        /* Sembunyikan grup nav secara default */
+        .nav-group {
+            display: none;
+        }
+        /* Tampilkan grup nav yang aktif */
+        .nav-group.active {
+            display: block;
+        }
+        /* Styling untuk link navigasi aktif */
+        .sidebar-link.active {
+            background-color: #4f46e5; /* indigo-600 */
+            color: white;
+        }
+        .role-link.active {
+            background-color: #eef2ff; /* indigo-50 */
+            color: #4338ca; /* indigo-700 */
+            border-bottom-width: 2px;
+            border-color: #4f46e5; /* indigo-600 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <div class="flex h-screen flex-col md:flex-row">
+        <!-- Sidebar Navigasi -->
+        <nav class="flex w-full flex-col bg-white md:w-64">
+            <!-- Header/Logo -->
+            <div class="flex items-center justify-center border-b p-4 shadow-sm md:h-16">
+                <svg class="h-8 w-8 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span class="ml-2 text-xl font-bold text-gray-800">App Verval</span>
+            </div>
+            
+            <!-- Navigasi Pilihan Peran -->
+            <div class="flex border-b border-gray-200 md:hidden">
+                <button onclick="switchRole('auditee')" class="role-link flex-1 py-3 px-4 text-sm font-medium text-gray-600" data-role="auditee">Auditee</button>
+                <button onclick="switchRole('auditor')" class="role-link flex-1 py-3 px-4 text-sm font-medium text-gray-600" data-role="auditor">Auditor</button>
+                <button onclick="switchRole('admin')" class="role-link flex-1 py-3 px-4 text-sm font-medium text-gray-600" data-role="admin">Admin</button>
+            </div>
+            
+            <div class="hidden border-b p-4 md:block">
+                <span class="text-xs font-semibold uppercase text-gray-500">Pilih Peran</span>
+                <div class="mt-2 flex flex-col space-y-1">
+                    <button onclick="switchRole('auditee')" class="role-link rounded-md px-3 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-100" data-role="auditee">
+                        <ion-icon name="document-text-outline" class="mr-2 -mt-1 inline-block"></ion-icon>
+                        Auditee (Unit)
+                    </button>
+                    <button onclick="switchRole('auditor')" class="role-link rounded-md px-3 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-100" data-role="auditor">
+                        <ion-icon name="search-outline" class="mr-2 -mt-1 inline-block"></ion-icon>
+                        Auditor (LPM/SPI)
+                    </button>
+                    <button onclick="switchRole('admin')" class="role-link rounded-md px-3 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-100" data-role="admin">
+                        <ion-icon name="cog-outline" class="mr-2 -mt-1 inline-block"></ion-icon>
+                        Administrator
+                    </button>
+                </div>
+            </div>
+
+            <!-- Konten Navigasi (berubah sesuai peran) -->
+            <div class="flex-1 overflow-y-auto p-4">
+                
+                <!-- Alur Auditee -->
+                <div class="nav-group" data-nav="auditee">
+                    <span class="text-xs font-semibold uppercase text-gray-500">Menu Auditee</span>
+                    <ul class="mt-2 space-y-1">
+                        <li><a href="#" class="sidebar-link group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-indigo-600 hover:text-white" onclick="showMockup('M-01')">
+                            <ion-icon name="grid-outline" class="mr-3 h-5 w-5"></ion-icon>
+                            M-01: Dashboard
+                        </a></li>
+                        <li><a href="#" class="sidebar-link group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-indigo-600 hover:text-white" onclick="showMockup('M-02')">
+                            <ion-icon name="list-outline" class="mr-3 h-5 w-5"></ion-icon>
+                            M-02: Checklist Indikator
+                        </a></li>
+                        <li><a href="#" class="sidebar-link group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-indigo-600 hover:text-white" onclick="showMockup('M-03')">
+                            <ion-icon name="cloud-upload-outline" class="mr-3 h-5 w-5"></ion-icon>
+                            M-03: Unggah Dokumen
+                        </a></li>
+                        <li><a href="#" class="sidebar-link group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-indigo-600 hover:text-white" onclick="showMockup('M-04')">
+                            <ion-icon name="alert-circle-outline" class="mr-3 h-5 w-5"></ion-icon>
+                            M-04: Temuan & Revisi
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Alur Auditor -->
+                <div class="nav-group" data-nav="auditor">
+                    <span class="text-xs font-semibold uppercase text-gray-500">Menu Auditor</span>
+                    <ul class="mt-2 space-y-1">
+                        <li><a href="#" class="sidebar-link group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-indigo-600 hover:text-white" onclick="showMockup('M-05')">
+                            <ion-icon name="hourglass-outline" class="mr-3 h-5 w-5"></ion-icon>
+                            M-05: Antrian Verval
+                        </a></li>
+                        <li><a href="#" class="sidebar-link group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-indigo-600 hover:text-white" onclick="showMockup('M-06')">
+                            <ion-icon name="checkmark-done-outline" class="mr-3 h-5 w-5"></ion-icon>
+                            M-06: Halaman Verval
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <!-- Alur Admin -->
+                <div class="nav-group" data-nav="admin">
+                    <span class="text-xs font-semibold uppercase text-gray-500">Menu Admin</span>
+                    <ul class="mt-2 space-y-1">
+                        <li><a href="#" class="sidebar-link group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-indigo-600 hover:text-white" onclick="showMockup('M-07')">
+                            <ion-icon name="book-outline" class="mr-3 h-5 w-5"></ion-icon>
+                            M-07: Kamus Data (DataBaku)
+                        </a></li>
+                        <li><a href="#" class="sidebar-link group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-indigo-600 hover:text-white" onclick="showMockup('M-08')">
+                            <ion-icon name="layers-outline" class="mr-3 h-5 w-5"></ion-icon>
+                            M-08: Manajemen Indikator
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Konten Utama -->
+        <main class="flex-1 overflow-y-auto bg-gray-100 p-4 pt-20 md:p-8">
+            
+            <!-- ====== M-01: Dashboard Auditee ====== -->
+            <section id="M-01" class="mockup-section">
+                <!-- Deskripsi Mockup -->
+                <div class="mb-6 rounded-lg border border-blue-200 bg-blue-50 p-4">
+                    <h2 class="mb-2 text-xl font-bold text-blue-800">M-01: Dashboard Auditee (Unit: Klinik)</h2>
+                    <p class="mb-2 text-sm text-blue-700">Menampilkan progres keseluruhan asesmen untuk unit yang sedang login.</p>
+                    <ul class="list-inside list-disc space-y-1 text-sm text-blue-700">
+                        <li><strong>Tujuan:</strong> Memberi gambaran cepat progres, temuan, dan linimasa.</li>
+                        <li><strong>Komponen:</strong> Pilihan asesmen & periode, grafik progres, daftar temuan, linimasa.</li>
+                        <li><strong>Alur:</strong> Halaman pertama yang dilihat Auditee setelah login.</li>
+                    </ul>
+                </div>
+
+                <!-- Visual Mockup -->
+                <div class="rounded-lg bg-white p-6 shadow">
+                    <!-- Header Halaman -->
+                    <div class="mb-6 flex flex-col items-start justify-between md:flex-row md:items-center">
+                        <div>
+                            <h1 class="text-2xl font-bold text-gray-900">Selamat Datang, Unit Klinik Pratama</h1>
+                            <p class="text-gray-600">Berikut adalah ringkasan progres asesmen Anda.</p>
+                        </div>
+                        <div class="mt-4 flex space-x-2 md:mt-0">
+                            <select class="rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                <option>Periode 2025</option>
+                                <option>Periode 2024</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Grid Statistik -->
+                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                        <!-- Kartu Progres AMI -->
+                        <div class="overflow-hidden rounded-lg bg-white p-5 shadow ring-1 ring-black ring-opacity-5">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <ion-icon name="documents-outline" class="h-8 w-8 text-indigo-600"></ion-icon>
+                                </div>
+                                <div class="ml-4 w-0 flex-1">
+                                    <dl>
+                                        <dt class="truncate text-sm font-medium text-gray-500">Progres AMI</dt>
+                                        <dd class="text-xl font-bold text-gray-900">12 / 15 Indikator</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="mt-4 h-2 w-full rounded-full bg-gray-200">
+                                <div class="h-2 rounded-full bg-indigo-600" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <!-- Kartu Progres ZI -->
+                        <div class="overflow-hidden rounded-lg bg-white p-5 shadow ring-1 ring-black ring-opacity-5">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <ion-icon name="shield-checkmark-outline" class="h-8 w-8 text-green-600"></ion-icon>
+                                </div>
+                                <div class="ml-4 w-0 flex-1">
+                                    <dl>
+                                        <dt class="truncate text-sm font-medium text-gray-500">Progres ZI</dt>
+                                        <dd class="text-xl font-bold text-gray-900">45 / 60 Indikator</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="mt-4 h-2 w-full rounded-full bg-gray-200">
+                                <div class="h-2 rounded-full bg-green-600" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <!-- Kartu Temuan -->
+                        <div class="overflow-hidden rounded-lg bg-white p-5 shadow ring-1 ring-black ring-opacity-5">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <ion-icon name="alert-circle-outline" class="h-8 w-8 text-red-600"></ion-icon>
+                                </div>
+                                <div class="ml-4 w-0 flex-1">
+                                    <dl>
+                                        <dt class="truncate text-sm font-medium text-gray-500">Temuan (Perlu Revisi)</dt>
+                                        <dd class="text-xl font-bold text-gray-900">3 Dokumen</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <button onclick="showMockup('M-04')" class="mt-4 w-full rounded-md bg-red-50 px-3 py-2 text-sm font-medium text-red-700 hover:bg-red-100">
+                                Lihat Temuan
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Linimasa -->
+                    <div class="mt-8">
+                        <h3 class="text-lg font-medium text-gray-900">Linimasa Asesmen</h3>
+                        <div class="mt-4 space-y-4">
+                            <div class="flex items-center">
+                                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-green-500">
+                                    <ion-icon name="checkmark-outline" class="h-5 w-5 text-white"></ion-icon>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-medium text-gray-900">Pengisian Dokumen AMI</p>
+                                    <p class="text-sm text-gray-500">Selesai (1 Nov 2025)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600">
+                                    <ion-icon name="hourglass-outline" class="h-5 w-5 text-white"></ion-icon>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-medium text-gray-900">Proses Verval Auditor</p>
+                                    <p class="text-sm text-gray-500">Sedang Berlangsung (2 Nov - 10 Nov 2025)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-400">
+                                    <ion-icon name="flag-outline" class="h-5 w-5 text-white"></ion-icon>
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-medium text-gray-900">Batas Akhir Revisi</p>
+                                    <p class="text-sm text-gray-500">15 Nov 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== M-02: Checklist Indikator ====== -->
+            <section id="M-02" class="mockup-section">
+                <!-- Deskripsi Mockup -->
+                <div class="mb-6 rounded-lg border border-blue-200 bg-blue-50 p-4">
+                    <h2 class="mb-2 text-xl font-bold text-blue-800">M-02: Checklist Indikator (Unit: Klinik)</h2>
+                    <p class="mb-2 text-sm text-blue-700">Ruang kerja utama Auditee untuk melihat semua indikator yang harus dipenuhi.</p>
+                    <ul class="list-inside list-disc space-y-1 text-sm text-blue-700">
+                        <li><strong>Tujuan:</strong> Menampilkan daftar `Indikator` yang relevan untuk unit ini dan status pemenuhannya.</li>
+                        <li><strong>Komponen:</strong> Tabel indikator, filter per asesmen, status (badge), tombol aksi.</li>
+                        <li><strong>Alur:</strong> Auditee mengklik "Unggah Bukti" untuk indikator yang `Pending`.</li>
+                    </ul>
+                </div>
+
+                <!-- Visual Mockup -->
+                <div class="rounded-lg bg-white shadow">
+                    <div class="p-6">
+                        <h1 class="text-2xl font-bold text-gray-900">Checklist Indikator: Klinik</h1>
+                        <div class="mt-4">
+                            <!-- Filter Tabs -->
+                            <div class="flex space-x-1 rounded-lg bg-gray-100 p-1">
+                                <button class="w-full rounded-md bg-white py-2 text-sm font-medium text-indigo-700 shadow">Semua (75)</button>
+                                <button class="w-full rounded-md py-2 text-sm font-medium text-gray-600 hover:bg-white/50">AMI (15)</button>
+                                <button class="w-full rounded-md py-2 text-sm font-medium text-gray-600 hover:bg-white/50">ZI (60)</button>
+                                <button class="w-full rounded-md py-2 text-sm font-medium text-gray-600 hover:bg-white/50">PPID (N/A)</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabel Indikator -->
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Indikator</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Asesmen</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Status</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                                <!-- Contoh 1: Verified -->
+                                <tr>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">Rencana Strategis dan Rencana Kerja Tahunan Klinik</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">AMI</td>
+                                    <td class="whitespace-nowrap px-6 py-4">
+                                        <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
+                                            Verified
+                                        </span>
+                                    </td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Lihat Bukti</a>
+                                    </td>
+                                </tr>
+                                <!-- Contoh 2: Invalid (Temuan) -->
+                                <tr>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">SOTK Klinik IAIN Pontianak</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">AMI</td>
+                                    <td class="whitespace-nowrap px-6 py-4">
+                                        <span class="inline-flex rounded-full bg-red-100 px-2 text-xs font-semibold leading-5 text-red-800">
+                                            Invalid
+                                        </span>
+                                    </td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <button onclick="showMockup('M-04')" class="rounded-md bg-red-600 px-3 py-1 text-xs font-medium text-white shadow-sm hover:bg-red-700">
+                                            Lihat Temuan
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- Contoh 3: Pending -->
+                                <tr>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">Surat ijin operasional Klinik</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">AMI</td>
+                                    <td class="whitespace-nowrap px-6 py-4">
+                                        <span class="inline-flex rounded-full bg-yellow-100 px-2 text-xs font-semibold leading-5 text-yellow-800">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <button onclick="showMockup('M-03')" class="rounded-md bg-indigo-600 px-3 py-1 text-xs font-medium text-white shadow-sm hover:bg-indigo-700">
+                                            Unggah Bukti
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- Contoh 4: Pending (dari ZI) -->
+                                <tr>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">Dokumen Agen Perubahan</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">ZI</td>
+                                    <td class="whitespace-nowrap px-6 py-4">
+                                        <span class="inline-flex rounded-full bg-yellow-100 px-2 text-xs font-semibold leading-5 text-yellow-800">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <button onclick="showMockup('M-03')" class="rounded-md bg-indigo-600 px-3 py-1 text-xs font-medium text-white shadow-sm hover:bg-indigo-700">
+                                            Unggah Bukti
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- ... data indikator lainnya ... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ====== M-03: Detail Indikator & Unggah ====== -->
+            <section id="M-03" class="mockup-section">
+                <!-- Deskripsi Mockup -->
+                <div class="mb-6 rounded-lg border border-blue-200 bg-blue-50 p-4">
+                    <h2 class="mb-2 text-xl font-bold text-blue-800">M-03: Unggah Dokumen</h2>
+                    <p class="mb-2 text-sm text-blue-700">Halaman untuk mengunggah bukti/dokumen, dipandu oleh Kamus Data.</p>
+                    <ul class="list-inside list-disc space-y-1 text-sm text-blue-700">
+                        <li><strong>Tujuan:</strong> Memastikan Auditee mengunggah dokumen yang TEPAT sesuai `DataBaku`.</li>
+                        <li><strong>Komponen:</strong> Detail indikator, daftar `DataBaku` yang dibutuhkan (dari Kamus Data), area upload.</li>
+                        <li><strong>Alur:</strong> Auditee membaca aturan `DataBaku`, lalu mengunggah file. Ini membuat record baru di `DokumenUnggahan`.</li>
+                    </ul>
+                </div>
+
+                <!-- Visual Mockup -->
+                <div class="rounded-lg bg-white p-6 shadow">
+                    <div class="mb-4">
+                        <a href="#" onclick="showMockup('M-02')" class="text-sm text-indigo-600 hover:text-indigo-800">
+                            &larr; Kembali ke Checklist
+                        </a>
+                        <h1 class="mt-2 text-2xl font-bold text-gray-900">Unggah Bukti Dokumen</h1>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                        <!-- Kolom Kiri: Detail Indikator & Upload -->
+                        <div class="space-y-4">
+                            <div>
+                                <h3 class="font-medium text-gray-900">Indikator</h3>
+                                <p class="mt-1 rounded-md bg-gray-50 p-3 text-gray-700">"SOTK Klinik IAIN Pontianak" <span class="text-xs text-gray-500">(Asesmen: AMI)</span></p>
+                            </div>
+                            
+                            <!-- Area Upload -->
+                            <div>
+                                <h3 class="font-medium text-gray-900">Unggah File Bukti</h3>
+                                <div class="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
+                                    <div class="text-center">
+                                        <ion-icon name="cloud-upload-outline" class="mx-auto h-12 w-12 text-gray-300"></ion-icon>
+                                        <div class="mt-4 flex text-sm leading-6 text-gray-600">
+                                            <label for="file-upload" class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
+                                                <span>Pilih file</span>
+                                                <input id="file-upload" name="file-upload" type="file" class="sr-only">
+                                            </label>
+                                            <p class="pl-1">atau tarik dan lepas</p>
+                                        </div>
+                                        <p class="text-xs leading-5 text-gray-600">PDF, PNG, JPG, DOCX (maks. 10MB)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="w-full rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">
+                                Simpan dan Kirim untuk Verval
+                            </button>
+                        </div>
+                        
+                        <!-- Kolom Kanan: Panduan dari Kamus Data -->
+                        <div class="space-y-4">
+                            <h3 class="font-medium text-gray-900">Panduan Data Baku (dari Kamus Data)</h3>
+                            <p class="text-sm text-gray-600">Indikator ini membutuhkan 1 Data Baku. Pastikan file yang Anda unggah sesuai dengan aturan berikut:</p>
+                            
+                            <!-- Kartu Data Baku -->
+                            <div class="rounded-lg border border-gray-200 bg-white shadow-sm">
+                                <div class="border-b bg-gray-50 p-4">
+                                    <h4 class="font-semibold text-gray-900">D002: Dokumen SOTK</h4>
+                                </div>
+                                <div class="p-4">
+                                    <dl class="space-y-3">
+                                        <div>
+                                            <dt class="text-xs font-medium uppercase text-gray-500">Definisi</dt>
+                                            <dd class="mt-1 text-sm text-gray-900">Dokumen Struktur Organisasi dan Tata Kerja yang sah.</dd>
+                                        </div>
+                                        <div>
+                                            <dt class="text-xs font-medium uppercase text-gray-500">SSOT (Sumber)</dt>
+                                            <dd class="mt-1 text-sm text-gray-900">Arsip SK Rektorat / Website OKPP</dd>
+                                        </div>
+                                        <div>
+                                            <dt class="text-xs font-medium uppercase text-gray-500">Logika Verifikasi (Keaslian)</dt>
+                                            <dd class="mt-1 text-sm text-gray-900">Harus ada nomor SK dan TTE/Tanda Tangan Pimpinan.</dd>
+                                        </div>
+                                        <div>
+                                            <dt class="text-xs font-medium uppercase text-gray-500">Logika Validasi (Relevansi)</dt>
+                                            <dd class="mt-1 text-sm text-gray-900">Pastikan SOTK adalah versi terbaru yang berlaku saat ini (bukan SK tahun lalu).</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ====== M-04: Temuan & Revisi ====== -->
+            <section id="M-04" class="mockup-section">
+                <!-- Deskripsi Mockup -->
+                <div class="mb-6 rounded-lg border border-blue-200 bg-blue-50 p-4">
+                    <h2 class="mb-2 text-xl font-bold text-blue-800">M-04: Temuan & Revisi</h2>
+                    <p class="mb-2 text-sm text-blue-700">Halaman bagi Auditee untuk melihat umpan balik Auditor dan mengunggah revisi.</p>
+                    <ul class="list-inside list-disc space-y-1 text-sm text-blue-700">
+                        <li><strong>Tujuan:</strong> Mengelola siklus revisi dokumen yang `Invalid`.</li>
+                        <li><strong>Komponen:</strong> Daftar temuan, `catatan_auditor`, tombol "Unggah Revisi".</li>
+                        <li><strong>Alur:</strong> Auditee membaca catatan, lalu mengklik "Unggah Revisi" (kembali ke M-03).</li>
+                    </ul>
+                </div>
+                
+                <!-- Visual Mockup -->
+                <div class="rounded-lg bg-white p-6 shadow">
+                    <h1 class="text-2xl font-bold text-gray-900">Daftar Temuan (Perlu Revisi)</h1>
+                    <p class="mt-1 text-gray-600">Dokumen berikut ditolak oleh auditor dan perlu diunggah ulang.</p>
+
+                    <div class="mt-6 space-y-4">
+                        <!-- Temuan 1 -->
+                        <div class="rounded-lg border border-red-300 bg-red-50">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-red-900">Indikator: SOTK Klinik IAIN Pontianak (AMI)</h3>
+                                <p class="mt-1 text-sm text-red-700">File: <span class="font-medium">SOTK_Lama.pdf</span></p>
+                                
+                                <div class="mt-3 rounded-md bg-white p-3 ring-1 ring-red-200">
+                                    <p class="text-sm font-medium text-gray-800">Catatan Auditor (LPM):</p>
+                                    <p class="mt-1 text-sm text-gray-700">"Dokumen kadaluwarsa. SK SOTK ini adalah SK tahun 2023, padahal sudah ada SK SOTK terbaru tahun 2025. Mohon unggah dokumen yang sesuai Logika Validasi (versi terbaru)."</p>
+                                </div>
+                            </div>
+                            <div class="border-t border-red-200 bg-red-50/50 px-4 py-3">
+                                <button onclick="showMockup('M-03')" class="rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-red-700">
+                                    Unggah Revisi
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Temuan 2 -->
+                        <div class="rounded-lg border border-red-300 bg-red-50">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-red-900">Indikator: Rencana Strategis dan Rencana Kerja Tahunan Ma'had (AMI)</h3>
+                                <p class="mt-1 text-sm text-red-700">File: <span class="font-medium">Renstra_Ma'had_Scan.pdf</span></p>
+                                
+                                <div class="mt-3 rounded-md bg-white p-3 ring-1 ring-red-200">
+                                    <p class="text-sm font-medium text-gray-800">Catatan Auditor (LPM):</p>
+                                    <p class="mt-1 text-sm text-gray-700">"Gagal Verifikasi (Keaslian). Dokumen tidak memiliki TTE atau tanda tangan basah pimpinan. Mohon unggah dokumen yang sudah disahkan."</p>
+                                </div>
+                            </div>
+                            <div class="border-t border-red-200 bg-red-50/50 px-4 py-3">
+                                <button onclick="showMockup('M-03')" class="rounded-md bg-red-600 px-3 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-red-700">
+                                    Unggah Revisi
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ====== M-05: Dashboard Auditor ====== -->
+            <section id="M-05" class="mockup-section">
+                <!-- Deskripsi Mockup -->
+                <div class="mb-6 rounded-lg border border-yellow-200 bg-yellow-50 p-4">
+                    <h2 class="mb-2 text-xl font-bold text-yellow-800">M-05: Antrian Verval (Dashboard Auditor)</h2>
+                    <p class="mb-2 text-sm text-yellow-700">Dashboard utama Auditor (LPM/SPI) untuk mengelola dokumen yang masuk.</p>
+                    <ul class="list-inside list-disc space-y-1 text-sm text-yellow-700">
+                        <li><strong>Tujuan:</strong> Menampilkan daftar `DokumenUnggahan` yang berstatus `Pending`.</li>
+                        <li><strong>Komponen:</strong> Tabel antrian, filter per unit/asesmen, tombol "Mulai Verval".</li>
+                        <li><strong>Alur:</strong> Auditor memilih dokumen dari antrian dan mengklik "Mulai Verval" (membuka M-06).</li>
+                    </ul>
+                </div>
+                
+                <!-- Visual Mockup -->
+                <div class="rounded-lg bg-white shadow">
+                    <div class="p-6">
+                        <h1 class="text-2xl font-bold text-gray-900">Antrian Verifikasi & Validasi (Verval)</h1>
+                        <p class="mt-1 text-gray-600">Ada <span class="font-bold text-indigo-600">18 dokumen</span> menunggu untuk diverifikasi.</p>
+                        <div class="mt-4 flex space-x-2">
+                             <select class="rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                <option>Semua Asesmen</option>
+                                <option>AMI</option>
+                                <option>ZI</option>
+                            </select>
+                            <select class="rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                <option>Semua Unit</option>
+                                <option>Klinik</option>
+                                <option>Ma'had</option>
+                                <option>BIRO</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabel Antrian Verval -->
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Unit Auditee</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Indikator</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Nama File</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Tgl Unggah</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                                <!-- Antrian 1 -->
+                                <tr>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">Klinik</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">Surat ijin operasional Klinik</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">Izin_Operasional.pdf</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">2 Nov 2025, 14:30</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <button onclick="showMockup('M-06')" class="rounded-md bg-indigo-600 px-3 py-1 text-xs font-medium text-white shadow-sm hover:bg-indigo-700">
+                                            Mulai Verval
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- Antrian 2 -->
+                                <tr>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">Ma'had</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">SOTK Ma'had Al-Jamiah</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">SOTK_Ma'had.pdf</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">2 Nov 2025, 11:15</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <button onclick="showMockup('M-06')" class="rounded-md bg-indigo-600 px-3 py-1 text-xs font-medium text-white shadow-sm hover:bg-indigo-700">
+                                            Mulai Verval
+                                        </button>
+                                    </td>
+                                </tr>
+                                <!-- ... data antrian lainnya ... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ====== M-06: Halaman Verval (Split-Screen) ====== -->
+            <section id="M-06" class="mockup-section">
+                <!-- Deskripsi Mockup -->
+                <div class="mb-6 rounded-lg border border-yellow-200 bg-yellow-50 p-4">
+                    <h2 class="mb-2 text-xl font-bold text-yellow-800">M-06: Halaman Verval (Split-Screen)</h2>
+                    <p class="mb-2 text-sm text-yellow-700">Inti dari aplikasi. Auditor membandingkan bukti (kiri) dengan aturan (kanan).</p>
+                    <ul class="list-inside list-disc space-y-1 text-sm text-yellow-700">
+                        <li><strong>Tujuan:</strong> Melakukan Verval `DokumenUnggahan` berdasarkan `Logika_Verifikasi` dan `Logika_Validasi` dari `DataBaku`.</li>
+                        <li><strong>Komponen:</strong> Panel Bukti (PDF viewer), Panel Aturan (Kamus Data), Formulir Keputusan (Status & Catatan).</li>
+                        <li><strong>Alur:</strong> Auditor membandingkan, lalu mengisi formulir keputusan (merubah status `DokumenUnggahan`).</li>
+                    </ul>
+                </div>
+
+                <!-- Visual Mockup -->
+                <div class="rounded-lg bg-white p-6 shadow">
+                     <div class="mb-4">
+                        <a href="#" onclick="showMockup('M-05')" class="text-sm text-indigo-600 hover:text-indigo-800">
+                            &larr; Kembali ke Antrian
+                        </a>
+                        <h1 class="mt-2 text-2xl font-bold text-gray-900">Proses Verifikasi & Validasi</h1>
+                        <p class="text-gray-600">Unit: <span class="font-medium">Klinik</span> | Indikator: <span class="font-medium">Surat ijin operasional Klinik</span></p>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+                        <!-- Panel Kiri: Bukti (File yang diunggah) -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Panel Bukti (Izin_Operasional.pdf)</h3>
+                            <div class="mt-4 h-96 w-full rounded-md border bg-gray-200 p-4">
+                                <!-- Placeholder untuk PDF Viewer -->
+                                <iframe src="https:" class="h-full w-full rounded-md bg-white" title="Dokumen Bukti">
+                                    <!-- Fallback content -->
+                                    <div class="flex h-full items-center justify-center text-gray-500">
+                                        [Pratinjau Dokumen PDF Akan Tampil Di Sini]
+                                    </div>
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <!-- Panel Kanan: Aturan (Kamus Data) -->
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900">Panel Aturan (Kamus Data)</h3>
+                            <div class="mt-4 rounded-lg border border-indigo-300 bg-indigo-50 p-4">
+                                <h4 class="font-semibold text-indigo-900">ID Data: D023 - Surat Izin Operasional</h4>
+                                <dl class="mt-3 space-y-3">
+                                    <div>
+                                        <dt class="text-xs font-medium uppercase text-gray-500">SSOT (Sumber)</dt>
+                                        <dd class="mt-1 text-sm text-gray-900">Arsip Legal / Website Unit</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-xs font-medium uppercase text-gray-500">Logika Verifikasi (Keaslian)</dt>
+                                        <dd class="mt-1 text-sm text-gray-900">Periksa lembaga penerbit izin dan TTE/Tanda Tangan pejabat berwenang.</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-xs font-medium uppercase text-gray-500">Logika Validasi (Relevansi)</dt>
+                                        <dd class="mt-1 text-sm text-gray-900">Pastikan surat izin masih berlaku dan belum kadaluwarsa.</dd>
+                                    </div>
+                                </dl>
+                            </div>
+
+                            <!-- Formulir Keputusan Auditor -->
+                            <div class="mt-6">
+                                <h3 class="text-lg font-semibold text-gray-900">Formulir Keputusan</h3>
+                                <fieldset class="mt-4">
+                                    <legend class="text-sm font-medium text-gray-700">Status Verval</legend>
+                                    <div class="mt-2 space-y-2">
+                                        <div class="flex items-center">
+                                            <input id="verified" name="status" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                            <label for="verified" class="ml-3 block text-sm text-gray-900">
+                                                <span class="font-medium text-green-700">Verified</span> (Sesuai & Valid)
+                                            </label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input id="invalid-relevance" name="status" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                            <label for="invalid-relevance" class="ml-3 block text-sm text-gray-900">
+                                                <span class="font-medium text-red-700">Invalid (Relevansi)</span> (Misal: kadaluwarsa)
+                                            </label>
+                                        </div>
+                                        <div class="flex items-center">
+                                            <input id="invalid-authenticity" name="status" type="radio" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                            <label for="invalid-authenticity" class="ml-3 block text-sm text-gray-900">
+                                                <span class="font-medium text-red-700">Invalid (Keaslian)</span> (Misal: tidak ada TTE)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <div class="mt-4">
+                                    <label for="catatan_auditor" class="block text-sm font-medium text-gray-700">Catatan Auditor (Wajib jika 'Invalid')</label>
+                                    <textarea id="catatan_auditor" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"></textarea>
+                                </div>
+                                <button type="submit" class="mt-4 w-full rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">
+                                    Simpan Keputusan
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ====== M-07: Admin: Manajemen Kamus Data ====== -->
+            <section id="M-07" class="mockup-section">
+                <!-- Deskripsi Mockup -->
+                <div class="mb-6 rounded-lg border border-purple-200 bg-purple-50 p-4">
+                    <h2 class="mb-2 text-xl font-bold text-purple-800">M-07: Admin - Manajemen Kamus Data (Tabel `DataBaku`)</h2>
+                    <p class="mb-2 text-sm text-purple-700">Halaman Superadmin untuk mengelola "otak" dari sistem.</p>
+                    <ul class="list-inside list-disc space-y-1 text-sm text-purple-700">
+                        <li><strong>Tujuan:</strong> CRUD (Create, Read, Update, Delete) untuk tabel `DataBaku`.</li>
+                        <li><strong>Komponen:</strong> Tabel data baku, tombol "Tambah Data", formulir edit/tambah.</li>
+                        <li><strong>Alur:</strong> Admin mendefinisikan `id_data`, `nama_baku`, `ssot`, dan `logika_verval` di sini.</li>
+                    </ul>
+                </div>
+                
+                <!-- Visual Mockup -->
+                <div class="rounded-lg bg-white shadow">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h1 class="text-2xl font-bold text-gray-900">Manajemen Kamus Data (`DataBaku`)</h1>
+                                <p class="mt-1 text-gray-600">Mengelola aturan, SSOT, dan logika Verval untuk semua data.</p>
+                            </div>
+                            <button class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">
+                                <ion-icon name="add-outline" class="-ml-1 mr-1 inline-block"></ion-icon>
+                                Tambah Data Baku
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabel Kamus Data -->
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">ID Data</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Nama Baku</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Penanggung Jawab</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">SSOT</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                                <!-- Data 1 -->
+                                <tr>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">D001</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">Dokumen Rencana Strategis (Renstra) Unit</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">LPM / Pimpinan Unit</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">e-Planning</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                    </td>
+                                </tr>
+                                <!-- Data 2 -->
+                                <tr>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">D002</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">Dokumen SOTK</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">OKPP</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">Website OKPP</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                    </td>
+                                </tr>
+                                <!-- Data 3 -->
+                                <tr>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium text-gray-900">D003</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">Dokumen SOP Layanan</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">Masing-masing Unit</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">e-Office</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                    </td>
+                                </tr>
+                                <!-- ... data baku lainnya ... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ====== M-08: Admin: Manajemen Indikator ====== -->
+            <section id="M-08" class="mockup-section">
+                <!-- Deskripsi Mockup -->
+                <div class="mb-6 rounded-lg border border-purple-200 bg-purple-50 p-4">
+                    <h2 class="mb-2 text-xl font-bold text-purple-800">M-08: Admin - Manajemen Indikator (Tabel `Indikator`)</h2>
+                    <p class="mb-2 text-sm text-purple-700">Halaman Superadmin untuk mengelola checklist asesmen dan relasinya ke Kamus Data.</p>
+                    <ul class="list-inside list-disc space-y-1 text-sm text-purple-700">
+                        <li><strong>Tujuan:</strong> CRUD untuk `Indikator` dan mengelola relasi `Ref_Indikator_DataBaku`.</li>
+                        <li><strong>Komponen:</strong> Tabel indikator, tombol "Tambah Indikator", antarmuka "Edit Relasi".</li>
+                        <li><strong>Alur:</strong> Admin menghubungkan indikator (misal: "SOTK Klinik") ke Data Baku (misal: "D002").</li>
+                    </ul>
+                </div>
+                
+                <!-- Visual Mockup -->
+                <div class="rounded-lg bg-white shadow">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h1 class="text-2xl font-bold text-gray-900">Manajemen Indikator (`Indikator`)</h1>
+                                <p class="mt-1 text-gray-600">Mengelola checklist asesmen dan menghubungkannya ke Kamus Data.</p>
+                            </div>
+                            <button class="rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700">
+                                <ion-icon name="add-outline" class="-ml-1 mr-1 inline-block"></ion-icon>
+                                Tambah Indikator
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Tabel Indikator -->
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Teks Indikator</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Sumber</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Data Baku Terhubung</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200 bg-white">
+                                <!-- Indikator 1 -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-900">Rencana Strategis dan Rencana Kerja Tahunan Klinik</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">AMI</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">
+                                        <span class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-semibold text-gray-800">D001</span>
+                                    </td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit Relasi</a>
+                                    </td>
+                                </tr>
+                                <!-- Indikator 2 -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-900">SOTK Klinik IAIN Pontianak</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">AMI</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">
+                                        <span class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-semibold text-gray-800">D002</span>
+                                    </td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit Relasi</a>
+                                    </td>
+                                </tr>
+                                <!-- Indikator 3 (dari ZI) -->
+                                <tr>
+                                    <td class="px-6 py-4 text-sm text-gray-900">Dokumen Agen Perubahan</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">ZI</td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm text-gray-500">
+                                        <span class="inline-flex rounded-full bg-gray-100 px-2 text-xs font-semibold text-gray-800">D025</span>
+                                    </td>
+                                    <td class="whitespace-nowrap px-6 py-4 text-sm font-medium">
+                                        <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit Relasi</a>
+                                    </td>
+                                </tr>
+                                <!-- ... data indikator lainnya ... -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script>
+        // Logika untuk SPA (Single Page Application) sederhana
+        
+        let currentMockup = 'M-01';
+        let currentRole = 'auditee';
+
+        // Fungsi untuk menampilkan mockup
+        function showMockup(mockupId) {
+            currentMockup = mockupId;
+            
+            // Sembunyikan semua section
+            document.querySelectorAll('.mockup-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Tampilkan section yang dipilih
+            document.getElementById(mockupId).classList.add('active');
+
+            // Atur link sidebar aktif
+            document.querySelectorAll('.sidebar-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelector(`.sidebar-link[onclick="showMockup('${mockupId}')"]`).classList.add('active');
+            
+            // Gulir ke atas halaman
+            document.querySelector('main').scrollTop = 0;
+        }
+
+        // Fungsi untuk mengganti peran
+        function switchRole(role) {
+            currentRole = role;
+
+            // Atur tombol peran aktif
+            document.querySelectorAll('.role-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelectorAll(`.role-link[data-role="${role}"]`).forEach(link => {
+                link.classList.add('active');
+            });
+
+            // Tampilkan grup navigasi yang sesuai
+            document.querySelectorAll('.nav-group').forEach(group => {
+                group.classList.remove('active');
+            });
+            document.querySelector(`.nav-group[data-nav="${role}"]`).classList.add('active');
+
+            // Tampilkan mockup pertama untuk peran tersebut
+            if (role === 'auditee') showMockup('M-01');
+            if (role === 'auditor') showMockup('M-05');
+            if (role === 'admin') showMockup('M-07');
+        }
+
+        // Inisialisasi: Tampilkan mockup dan peran default saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            switchRole('auditee');
+        });
+
+    </script>
+</body>
+</html>
