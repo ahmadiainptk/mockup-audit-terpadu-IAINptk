@@ -47,6 +47,9 @@
                 <button onclick="changeTab(event, 'iso')" class="tab-button bg-gray-200 text-gray-700 rounded-t-lg whitespace-nowrap py-3 px-5 text-sm sm:text-base font-medium border-b-2 border-transparent">
                     ISO 9001:2015
                 </button>
+                <button onclick="changeTab(event, 'masterlist')" class="tab-button bg-gray-200 text-gray-700 rounded-t-lg whitespace-nowrap py-3 px-5 text-sm sm:text-base font-medium border-b-2 border-transparent">
+                    Master List (Cross-Reference)
+                </button>
             </nav>
         </div>
 
@@ -213,6 +216,86 @@
                 </div>
             </div>
 
+            <!-- 6. KONTEN BARU: MASTER LIST -->
+            <div id="masterlist" class="tab-content">
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-blue-700 mb-4">Master List (Cross-Reference)</h2>
+                    <p class="mb-6">Ini adalah daftar gabungan semua dokumen yang dibutuhkan dari seluruh asesmen (ZI, AMI, Akreditasi, PPID, ISO). Dokumen dikelompokkan berdasarkan jenis/fungsinya untuk memudahkan pengumpulan. Daftar ini adalah **gabungan (union)**, bukan hanya irisan (intersection).</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Group 1 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">1. Dokumen Kebijakan & Tata Pamong (Level Institusi)</h3>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>SK VMTS (Visi, Misi, Tujuan, Strategi):</strong> (Dibutuhkan oleh: AMI, Akreditasi)</li>
+                                <li><strong>SK SOTK (Struktur Organisasi & Tata Kerja):</strong> (AMI, Akreditasi, PPID)</li>
+                                <li><strong>Dokumen SPMI Lengkap (Kebijakan, Manual, Standar, Formulir):</strong> (AMI, Akreditasi, ISO)</li>
+                                <li><strong>Kebijakan Mutu & Ruang Lingkup SMM:</strong> (ISO)</li>
+                                <li><strong>SK Tim Kerja (ZI, PPID, dll.) & SK Agen Perubahan:</strong> (ZI)</li>
+                                <li><strong>Perjanjian Kinerja (PK) Pimpinan:</strong> (ZI, Akuntabilitas)</li>
+                                <li><strong>Laporan Akuntabilitas Kinerja (LAKIP):</strong> (ZI, PPID, Akuntabilitas)</li>
+                                <li><strong>Regulasi/SK Rektor Lainnya (terkait akademik, keuangan, dll.):</strong> (PPID, Akreditasi)</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Group 2 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">2. Dokumen Perencanaan & Strategi</h3>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>Rencana Pembangunan ZI:</strong> (ZI)</li>
+                                <li><strong>*Roadmap* (Peta Jalan) Penelitian & PkM:</strong> (AMI, Akreditasi)</li>
+                                <li><strong>Sasaran Mutu:</strong> (ISO, SPMI)</li>
+                                <li><strong>Analisis SWOT / Analisis Lingkungan:</strong> (Akreditasi)</li>
+                                <li><strong>Dokumen Manajemen Risiko (Manris):</strong> (ISO, ZI)</li>
+                                <li><strong>Laporan Keuangan (DIPA, RKA-KL, Alokasi Anggaran):</strong> (Akreditasi, PPID)</li>
+                                <li><strong>Analisis Jabatan (Anjab) & Analisis Beban Kerja (ABK):</strong> (ZI)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Group 3 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">3. Dokumen Operasional (SOP, Proses, Kurikulum)</h3>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>Peta Proses Bisnis (Probis):</strong> (ZI)</li>
+                                <li><strong>Kumpulan SOP Layanan (Akademik, Kemahasiswaan, Umum):</strong> (ZI, AMI, Akreditasi, PPID, ISO)</li>
+                                <li><strong>Standar Pelayanan (SP) & Maklumat Pelayanan:</strong> (ZI)</li>
+                                <li><strong>SOP Spesifik Pengawasan:</strong> (SOP Layanan Informasi, SOP Pengaduan, SOP WBS, SOP Benturan Kepentingan) (ZI, PPID)</li>
+                                <li><strong>Dokumen Kurikulum (SK, RPS, Kontrak Kuliah):</strong> (AMI, Akreditasi)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Group 4 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">4. Dokumen SDM (Dosen & Tendik)</h3>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>Profil & Data Dosen/Tendik (Ijazah, Serdos, Jafung):</strong> (Akreditasi)</li>
+                                <li><strong>SK Pengangkatan Dosen & Tendik:</strong> (Akreditasi)</li>
+                                <li><strong>Dokumen SKP (Sasaran Kinerja Pegawai):</strong> (ZI, AMI)</li>
+                                <li><strong>Laporan BKD (Beban Kerja Dosen):</strong> (AMI, Akreditasi)</li>
+                                <li><strong>Bukti/Rekaman Kompetensi (Pelatihan, Seminar):</strong> (AMI, Akreditasi, ISO)</li>
+                                <li><strong>Laporan Mutasi/Rotasi:</strong> (ZI)</li>
+                                <li><strong>Dokumen Kode Etik & Bukti Penegakan:</strong> (ZI)</li>
+                                <li><strong>Bukti Pelaporan LHKPN/LHKASN:</strong> (ZI, PPID)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Group 5 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">5. Rekaman Mutu & Bukti Pelaksanaan (Laporan, Notulensi, Data)</h3>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>Bukti Pelaksanaan Tridharma:</strong> (Laporan Penelitian, Laporan PkM, Bukti Publikasi, Bukti HKI) (AMI, Akreditasi)</li>
+                                <li><strong>Bukti Pelaksanaan Pendidikan:</strong> (Monitoring perkuliahan, Jurnal, Presensi, Data IPK & masa studi) (AMI, Akreditasi)</li>
+                                <li><strong>Bukti Umpan Balik (Feedback):</strong> (Laporan Evaluasi Dosen, Laporan Kepuasan Mahasiswa, Laporan *Tracer Study*, Laporan Kepuasan Pengguna, Laporan SKM) (ZI, AMI, Akreditasi)</li>
+                                <li><strong>Bukti Pengawasan & Evaluasi:</strong> (Laporan Audit Internal (AMI), Rekaman Tinjauan Manajemen (RTM), Laporan SPIP, Rekaman Penanganan Ketidaksesuaian/Keluhan, Rekaman Tindakan Korektif) (ZI, AMI, Akreditasi, ISO)</li>
+                                <li><strong>Bukti Pelaksanaan PPID:</strong> (Daftar Informasi Publik (DIP), Laporan Tahunan Layanan Informasi) (PPID)</li>
+                                <li><strong>Bukti Lainnya:</strong> (Laporan Sosialisasi, Bukti e-Office, Data Maba, Bukti Prestasi Mahasiswa, Data Inventaris, MoU, MoA, Laporan IA) (ZI, Akreditasi)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </main>
     </div>
 
@@ -242,3 +325,4 @@
 
 </body>
 </html>
+
