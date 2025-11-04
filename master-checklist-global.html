@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Checklist Gabungan Asesmen PTKIN</title>
     <!-- Memuat Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -93,7 +93,13 @@
                             <strong class="text-gray-800">SK VMTS (Visi, Misi, Tujuan, Strategi)</strong>
                             <div class="tags-container"><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-ami">AMI</span></div>
                         </summary>
-                        <!-- Tidak ada indikator internal spesifik di CSV untuk ini, tapi ini adalah dokumen payung -->
+                        <div class="indicator-list">
+                            <p class="text-sm font-semibold text-gray-700">Indikator Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 1 (VMTS)</li>
+                                <li><span class="assessment-prefix">(AMI)</span> Kesesuaian VMTS dengan Standar SPMI</li>
+                            </ul>
+                        </div>
                     </details>
                     
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
@@ -101,7 +107,14 @@
                             <strong class="text-gray-800">Dokumen SPMI Lengkap (Kebijakan, Manual, Standar, Formulir)</strong>
                             <div class="tags-container"><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-ami">AMI</span><span class="tag tag-iso">ISO</span></div>
                         </summary>
-                        <!-- Dokumen SPMI adalah payung untuk banyak indikator AMI -->
+                        <div class="indicator-list">
+                            <p class="text-sm font-semibold text-gray-700">Indikator Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Ketersediaan Dokumen Kebijakan SPMI</li>
+                                <li><span class="assessment-prefix">(AMI)</span> Ketersediaan Dokumen Manual SPMI</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Pemenuhan Klausul 4.4 (Sistem Manajemen Mutu)</li>
+                            </ul>
+                        </div>
                     </details>
                     
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
@@ -109,6 +122,13 @@
                             <strong class="text-gray-800">Kebijakan Mutu & Ruang Lingkup SMM (Wajib ISO)</strong>
                             <div class="tags-container"><span class="tag tag-iso">ISO (Klausul 4.3, 5.2)</span></div>
                         </summary>
+                         <div class="indicator-list">
+                            <p class="text-sm font-semibold text-gray-700">Indikator Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ISO)</span> Penetapan dan Komunikasi Kebijakan Mutu (Klausul 5.2)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Penetapan Ruang Lingkup Sistem Manajemen Mutu (Klausul 4.3)</li>
+                            </ul>
+                        </div>
                     </details>
 
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
@@ -123,13 +143,19 @@
                                 <li><span class="assessment-prefix">(PPID)</span> Profil Singkat Pimpinan (Rektor, Warek, Dekan, Direktur Pasca)</li>
                                 <li><span class="assessment-prefix">(PPID)</span> Struktur Organisasi</li>
                             </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 2 (Tata Pamong)</li>
+                                <li><span class="assessment-prefix">(ZI)</span> Penataan Tatalaksana (Area 2)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Peran, Tanggung Jawab, dan Wewenang Organisasi (Klausul 5.3)</li>
+                            </ul>
                         </div>
                     </details>
                     
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
                         <summary>
                             <strong class="text-gray-800">Perjanjian Kinerja (PK) & Dokumen Kinerja Terkait</strong>
-                            <div class="tags-container"><span class="tag tag-zi">ZI (Internal)</span><span class="tag tag-iso">ISO (Klausul 6.2 - Bukti Sasaran Mutu)</span></div>
+                            <div class="tags-container"><span class="tag tag-zi">ZI (Internal)</span><span class="tag tag-iso">ISO (Klausul 6.2)</span></div>
                         </summary>
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
@@ -137,6 +163,10 @@
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumen Perjanjian Kinerja</li>
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumen Kerangka Logis Kinera</li>
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumen Pengendalian Aktivitas</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ISO)</span> Penetapan Sasaran Mutu dan Perencanaan (Klausul 6.2)</li>
                             </ul>
                         </div>
                     </details>
@@ -151,6 +181,11 @@
                             <ul>
                                 <li><span class="assessment-prefix">(PPID)</span> LAKIP</li>
                             </ul>
+                             <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ZI)</span> Pemenuhan Area 4 (Penguatan Akuntabilitas)</li>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Ketersediaan Laporan Kinerja (LKPT)</li>
+                            </ul>
                         </div>
                     </details>
                     
@@ -164,23 +199,25 @@
                             <ul>
                                 <li><span class="assessment-prefix">(PPID)</span> Laporan Keuangan</li>
                             </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 5 (Keuangan)</li>
+                            </ul>
                         </div>
                     </details>
                     
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
                         <summary>
                             <strong class="text-gray-800">Tanda Terima/Bukti Lapor LHKPN & LHKASN</strong>
-                            <div class="tags-container"><span class="tag tag-zi">ZI (Internal)</span><span class="tag tag-ppid">PPID (Internal)</span></div>
+                            <div class="tags-container"><span class="tag tag-zi">ZI (Internal)</span><span class="tag tag-ppid">PPID</span></div>
                         </summary>
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
                             <ul>
-                                <!-- Ini adalah contoh di mana saya menggabungkan baris duplikat dari CSV Anda -->
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumen Pelaporan LHKPN</li>
-                                <li><span class="assessment-prefix">(ZI)</span> Dokumen Pelaporan LHKASN</li>
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumen Pelaporan LHKASN Dokunen Pejabat Administrator</li>
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumen Pelaporan LHKASN Dokumen Pejabat Pengawas</li>
-                                <li><span class="assessment-prefix">(ZI)</span> Dokumen Pelaporan LHKASN Dokumen jabatan fungsional dan pelaksana</li>
+                                <li><span class="assessment-prefix">(ZI)</span> Dokumen Pelaporan LHKASN<br>Dokumen jabatan fungsional dan pelaksana</li>
                             </ul>
                         </div>
                     </details>
@@ -216,13 +253,17 @@
                             <ul>
                                 <li><span class="assessment-prefix">(ZI)</span> Peta Proses Bisnis</li>
                             </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ISO)</span> Perencanaan dan Pengendalian Operasional (Klausul 8.1)</li>
+                            </ul>
                         </div>
                     </details>
                     
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
                         <summary>
                             <strong class="text-gray-800">Kumpulan SOP Layanan & Standar Pelayanan</strong>
-                            <div class="tags-container"><span class="tag tag-ami">AMI</span><span class="tag tag-zi">ZI</span><span class="tag tag-ppid">PPID</span><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-iso">ISO (Klausul 7.5, 8.1, 8.2)</span></div>
+                            <div class="tags-container"><span class="tag tag-ami">AMI</span><span class="tag tag-zi">ZI (Internal)</span><span class="tag tag-ppid">PPID (Internal)</span><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-iso">ISO</span></div>
                         </summary>
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
@@ -233,19 +274,29 @@
                                 <li><span class="assessment-prefix">(PPID)</span> SOP Pengelolaan dan Pelayanan Informasi Publik</li>
                                 <li><span class="assessment-prefix">(ZI)</span> Standar Pelayanan</li>
                             </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(AMI)</span> Ketersediaan SOP Layanan</li>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Ketersediaan SOP Layanan (Kriteria 2, 6)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Informasi Terdokumentasi (Klausul 7.5, 8.1, 8.2)</li>
+                            </ul>
                         </div>
                     </details>
 
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
                         <summary>
                             <strong class="text-gray-800">Roadmap (Peta Jalan) Penelitian & PkM</strong>
-                            <div class="tags-container"><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-ami">AMI (Internal)</span><span class="tag tag-iso">ISO (Klausul 8.3 - Desain)</span></div>
+                            <div class="tags-container"><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-ami">AMI (Internal)</span><span class="tag tag-iso">ISO (Klausul 8.3)</span></div>
                         </summary>
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
                             <ul>
                                 <li><span class="assessment-prefix">(AMI)</span> Roadmap Penelitian</li>
                                 <li><span class="assessment-prefix">(AMI)</span> Roadmap PkM</li>
+                            </ul>
+                             <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 7 (Penelitian) & Kriteria 8 (PkM)</li>
                             </ul>
                         </div>
                     </details>
@@ -261,6 +312,11 @@
                                 <li><span class="assessment-prefix">(AMI)</span> Manajemen Risiko pada Pusat Bahasa</li>
                                 <li><span class="assessment-prefix">(AMI)</span> Manajemen Risiko SPI</li>
                             </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ISO)</span> Tindakan untuk Mengatasi Risiko dan Peluang (Klausul 6.1)</li>
+                                <li><span class="assessment-prefix">(ZI)</span> Penerapan Manajemen Risiko (Area 5)</li>
+                            </ul>
                         </div>
                     </details>
                     
@@ -273,6 +329,10 @@
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
                             <ul>
                                 <li><span class="assessment-prefix">(PPID)</span> Aksesibilitas Website PPID</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ZI)</span> Penerapan SPBE (Area 2)</li>
                             </ul>
                         </div>
                     </details>
@@ -289,18 +349,28 @@
                             <strong class="text-gray-800">Profil, Data, & SK Pengangkatan Dosen & Tendik</strong>
                             <div class="tags-container"><span class="tag tag-akreditasi">Akreditasi</span></div>
                         </summary>
+                         <div class="indicator-list">
+                            <p class="text-sm font-semibold text-gray-700">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 4 (SDM)</li>
+                            </ul>
+                        </div>
                     </details>
 
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
                         <summary>
                             <strong class="text-gray-800">Sasaran Kinerja Pegawai (SKP) & Bukti Evaluasinya</strong>
-                            <div class="tags-container"><span class="tag tag-zi">ZI</span><span class="tag tag-ami">AMI (Internal)</span><span class="tag tag-iso">ISO (Klausul 7.2 - Kompetensi)</span></div>
+                            <div class="tags-container"><span class="tag tag-zi">ZI</span><span class="tag tag-ami">AMI (Internal)</span><span class="tag tag-iso">ISO (Klausul 7.2)</span></div>
                         </summary>
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
                             <ul>
                                 <li><span class="assessment-prefix">(AMI)</span> SKP</li>
                                 <li><span class="assessment-prefix">(AMI)</span> Bukti evaluasi kompetensi sesuai dengan struktur SPI</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ZI)</span> Penerapan Kinerja Individu (Area 3)</li>
                             </ul>
                         </div>
                     </details>
@@ -310,6 +380,13 @@
                             <strong class="text-gray-800">Laporan BKD (Beban Kerja Dosen)</strong>
                             <div class="tags-container"><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-ami">AMI</span></div>
                         </summary>
+                         <div class="indicator-list">
+                            <p class="text-sm font-semibold text-gray-700">Indikator Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 4 (SDM)</li>
+                                <li><span class="assessment-prefix">(AMI)</span> Kesesuaian Pelaksanaan BKD</li>
+                            </ul>
+                        </div>
                     </details>
                     
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
@@ -323,18 +400,27 @@
                                 <li><span class="assessment-prefix">(AMI)</span> Bukti pemenuhan kompetensi untuk personil yang ada di pusat bahasa</li>
                                 <li><span class="assessment-prefix">(AMI)</span> Pengembangan Kompetensi</li>
                             </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 4 (SDM)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Bukti Kompetensi Personil (Klausul 7.2)</li>
+                            </ul>
                         </div>
                     </details>
                     
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
                         <summary>
                             <strong class="text-gray-800">Dokumentasi Reward & Punishment Pegawai</strong>
-                            <div class="tags-container"><span class="tag tag-zi">ZI (Internal)</span><span class="tag tag-iso">ISO (Klausul 7.3 - Kesadaran)</span></div>
+                            <div class="tags-container"><span class="tag tag-zi">ZI (Internal)</span><span class="tag tag-iso">ISO (Klausul 7.3)</span></div>
                         </summary>
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
                             <ul>
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumentasi Reward dan punishment</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ISO)</span> Bukti Kesadaran Personil (terkait Konsekuensi) (Klausul 7.3)</li>
                             </ul>
                         </div>
                     </details>
@@ -349,6 +435,11 @@
                             <ul>
                                 <li><span class="assessment-prefix">(AMI)</span> Bukti pemeliharaan inventaris infrastruktur</li>
                                 <li><span class="assessment-prefix">(AMI)</span> Bukti implementasi kebijakan sarana prasarana</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 5 (Sarpras)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Bukti Pemeliharaan Infrastruktur (Klausul 7.1.3)</li>
                             </ul>
                         </div>
                     </details>
@@ -370,18 +461,28 @@
                             <ul>
                                 <li><span class="assessment-prefix">(AMI)</span> Dokumen Kurikulum</li>
                             </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 6 (Pendidikan)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Desain dan Pengembangan (Klausul 8.3) / Pengendalian Proses (8.5)</li>
+                            </ul>
                         </div>
                     </details>
                     
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
                         <summary>
                             <strong class="text-gray-800">Jurnal Perkuliahan / Logbook / Bukti Aktivitas di LMS</strong>
-                            <div class="tags-container"><span class="tag tag-ami">AMI (Internal)</span><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-iso">ISO (Klausul 8.5 - Pengendalian Proses)</span></div>
+                            <div class="tags-container"><span class="tag tag-ami">AMI (Internal)</span><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-iso">ISO (Klausul 8.5)</span></div>
                         </summary>
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
                             <ul>
                                 <li><span class="assessment-prefix">(AMI)</span> Bentuk interaksi antara dosen, mahasiswa dan sumber belajar</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Bukti Proses Pembelajaran (Kriteria 6)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Pengendalian Produksi dan Penyediaan Jasa (Klausul 8.5)</li>
                             </ul>
                         </div>
                     </details>
@@ -394,13 +495,16 @@
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
                             <ul>
-                                <!-- Ini adalah contoh pengelompokan yang sangat baik -->
                                 <li><span class="assessment-prefix">(AMI)</span> Artikel Karya Ilmiah DTPS yang disitasi (RS)</li>
-                                <li><span class="assessment-prefix">(AMI)</span> Publikasi Ilmiah DTPS (Jurnal Internasional Bereputasi, dll...)</li>
-                                <li><span class="assessment-prefix">(AMI)</span> Publikasi Ilmiah DTPS (Seminar Wilayah/Lokal, dll...)</li>
+                                <li><span class="assessment-prefix">(AMI)</span> Publikasi Ilmiah DTPS (Jurnal Internasional Bereputasi, dll)</li>
+                                <li><span class="assessment-prefix">(AMI)</span> Publikasi Ilmiah DTPS (Seminar Wilayah/Lokal, dll)</li>
                                 <li><span class="assessment-prefix">(AMI)</span> HKI (Paten, Paten Sederhana) yang Dihasilkan DTPS</li>
                                 <li><span class="assessment-prefix">(AMI)</span> HKI (Hak Cipta, Desain Produk Industri, dll) yang Dihasilkan DTPS</li>
                                 <!-- Dan banyak lagi baris serupa dari CSV Anda -->
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 7 & 9 (Penelitian & Luaran)</li>
                             </ul>
                         </div>
                     </details>
@@ -419,18 +523,26 @@
                                 <li><span class="assessment-prefix">(AMI)</span> PkM DTPS yang mendapat pengakuan HKI</li>
                                 <!-- Dan banyak lagi baris serupa dari CSV Anda -->
                             </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Pemenuhan Kriteria 8 & 9 (PkM & Luaran)</li>
+                            </ul>
                         </div>
                     </details>
                     
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
                         <summary>
                             <strong class="text-gray-800">Dokumen Informasi Layanan (Beasiswa, UKT, KIP, dll)</strong>
-                            <div class="tags-container"><span class="tag tag-ppid">PPID (Internal)</span><span class="tag tag-akreditasi">Akreditasi (Layanan Mhs)</span></div>
+                            <div class="tags-container"><span class="tag tag-ppid">PPID (Internal)</span><span class="tag tag-akreditasi">Akreditasi</span></div>
                         </summary>
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
                             <ul>
                                 <li><span class="assessment-prefix">(PPID)</span> Beasiswa, Hibah, UKT, KIP, dll</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Layanan Kemahasiswaan (Kriteria 3)</li>
                             </ul>
                         </div>
                     </details>
@@ -440,6 +552,13 @@
                             <strong class="text-gray-800">Bukti Yudisium, Ijazah, Transkrip (Rekaman Pelepasan Jasa)</strong>
                             <div class="tags-container"><span class="tag tag-akreditasi">Akreditasi</span><span class="tag tag-iso">ISO (Klausul 8.6)</span></div>
                         </summary>
+                        <div class="indicator-list">
+                             <p class="text-sm font-semibold text-gray-700">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Data Lulusan (Kriteria 3 & 9)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Pelepasan Produk dan Jasa (Klausul 8.6)</li>
+                            </ul>
+                        </div>
                     </details>
                 </div>
             </div>
@@ -459,7 +578,12 @@
                             <ul>
                                 <li><span class="assessment-prefix">(AMI)</span> Analisis dan tindak lanjut pengukuran kepuasan mahasiswa</li>
                                 <li><span class="assessment-prefix">(AMI)</span> Hasil Pengukuran Kepuasan Pengguna</li>
-                                <!-- Dan banyak lagi baris serupa dari CSV Anda -->
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ZI)</span> Survei Kepuasan Masyarakat (Area 6)</li>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Kepuasan Pengguna (Kriteria 9)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Pemantauan Kepuasan Pelanggan (Klausul 9.1.2)</li>
                             </ul>
                         </div>
                     </details>
@@ -469,6 +593,12 @@
                             <strong class="text-gray-800">Laporan *Tracer Study* Lulusan</strong>
                             <div class="tags-container"><span class="tag tag-akreditasi">Akreditasi</span></div>
                         </summary>
+                         <div class="indicator-list">
+                             <p class="text-sm font-semibold text-gray-700">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Luaran Lulusan (Kriteria 9)</li>
+                            </ul>
+                        </div>
                     </details>
 
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
@@ -481,6 +611,12 @@
                             <ul>
                                 <li><span class="assessment-prefix">(AMI)</span> Audit Mutu Internal</li>
                                 <li><span class="assessment-prefix">(AMI)</span> Laporan Hasil RTM</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(Akreditasi)</span> Bukti Siklus PPEPP (Kriteria 2)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Pelaksanaan Audit Internal (Klausul 9.2)</li>
+                                <li><span class="assessment-prefix">(ISO)</span> Rekaman Tinjauan Manajemen (Klausul 9.3)</li>
                             </ul>
                         </div>
                     </details>
@@ -496,13 +632,17 @@
                                 <li><span class="assessment-prefix">(AMI)</span> Laporan evaluasi kinerja personil di pusba</li>
                                 <li><span class="assessment-prefix">(AMI)</span> Laporan Tahunan SPIP</li>
                             </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ZI)</span> Pemenuhan Area 5 (Penguatan Pengawasan)</li>
+                            </ul>
                         </div>
                     </details>
 
                     <details class="border border-gray-200 rounded-lg overflow-hidden">
                         <summary>
                             <strong class="text-gray-800">SOP Pengelolaan Pengaduan & Laporan/Rekaman Penanganan Pengaduan</strong>
-                            <div class="tags-container"><span class="tag tag-zi">ZI (Internal)</span><span class="tag tag-ppid">PPID (Internal)</span><span class="tag tag-iso">ISO (Klausul 10.2 - Ketidaksesuaian)</span></div>
+                            <div class="tags-container"><span class="tag tag-zi">ZI (Internal)</span><span class="tag tag-ppid">PPID (Internal)</span><span class="tag tag-iso">ISO (Klausul 10.2)</span></div>
                         </summary>
                         <div class="indicator-list">
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
@@ -513,6 +653,10 @@
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumen pengaduan masyarakat (Belum di tindaklanjuti)</li>
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumen Pengaduan masyarakat (Proses)</li>
                                 <li><span class="assessment-prefix">(ZI)</span> Dokumen Pengaduan masyarakat (selesai tindak lanjut)</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ISO)</span> Penanganan Ketidaksesuaian dan Tindakan Korektif (Klausul 10.2)</li>
                             </ul>
                         </div>
                     </details>
@@ -526,6 +670,10 @@
                             <p class="text-sm font-semibold text-gray-700">Indikator Internal Terkait (dari file CSV Anda):</p>
                             <ul>
                                 <li><span class="assessment-prefix">(AMI)</span> Bukti monitoring rekomendasi</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-gray-700 mt-2">Indikator Eksternal Terkait:</p>
+                            <ul>
+                                <li><span class="assessment-prefix">(ISO)</span> Penanganan Ketidaksesuaian dan Tindakan Korektif (Klausul 10.2)</li>
                             </ul>
                         </div>
                     </details>
