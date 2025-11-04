@@ -1,0 +1,1611 @@
+[
+  {
+    "kategori_checklist": "1. Kebijakan, Tata Pamong & Akuntabilitas",
+    "deskripsi_kategori": "Dokumen level institusi yang menetapkan arah, struktur, dan tanggung jawab.",
+    "daftar_grup_dokumen": [
+      {
+        "nama_checklist_grup": "SK VMTS (Visi, Misi, Tujuan, Strategi)",
+        "asesmen_grup_payung": [
+          "Akreditasi",
+          "AMI"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "SK Penetapan VMTS Institusi/Fakultas/Prodi",
+            "tipe_dokumen_disarankan": "PDF (SK)",
+            "sumber_dokumen_disarankan": "Pimpinan (Rektor/Dekan/Kaprodi)",
+            "validator_disarankan": "LPM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "4-5 Tahun (Sesuai Periode Renstra)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 1 (VMTS)"
+              },
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Kesesuaian VMTS dengan Standar SPMI"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Dokumen SPMI Lengkap (Kebijakan, Manual, Standar, Formulir)",
+        "asesmen_grup_payung": [
+          "Akreditasi",
+          "AMI",
+          "ISO"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Buku Kebijakan SPMI",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "LPM (Lembaga Penjaminan Mutu)",
+            "validator_disarankan": "LPM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai Periode Kebijakan",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Ketersediaan Dokumen Kebijakan SPMI"
+              },
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Ketersediaan Dokumen Kebijakan SPMI"
+              },
+              {
+                "jenis_asesmen": "ISO",
+                "teks_indikator_asli": "Pemenuhan Klausul 4.4 (Sistem Manajemen Mutu)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Buku Manual SPMI",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "LPM",
+            "validator_disarankan": "LPM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai Periode Kebijakan",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Ketersediaan Dokumen Manual SPMI"
+              },
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Ketersediaan Dokumen Manual SPMI"
+              },
+              {
+                "jenis_asesmen": "ISO",
+                "teks_indikator_asli": "Pemenuhan Klausul 4.4 (Sistem Manajemen Mutu)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Buku Standar SPMI (Standar Dikti + Standar Turunan)",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "LPM",
+            "validator_disarankan": "LPM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1-4 Tahun (sesuai siklus PPEPP)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Ketersediaan Dokumen Standar SPMI"
+              },
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Ketersediaan Dokumen Standar SPMI"
+              },
+              {
+                "jenis_asesmen": "ISO",
+                "teks_indikator_asli": "Pemenuhan Klausul 4.4 (Sistem Manajemen Mutu)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Kebijakan Mutu & Ruang Lingkup SMM (Wajib ISO)",
+        "asesmen_grup_payung": [
+          "ISO (Klausul 4.3, 5.2)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Dokumen Kebijakan Mutu (Tertanda Pimpinan)",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "LPM / Top Management",
+            "validator_disarankan": "Auditor ISO",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai Tinjauan Manajemen",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ISO (Klausul 5.2)",
+                "teks_indikator_asli": "Penetapan dan Komunikasi Kebijakan Mutu"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Dokumen Ruang Lingkup SMM",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "LPM / Top Management",
+            "validator_disarankan": "Auditor ISO",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai Tinjauan Manajemen",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ISO (Klausul 4.3)",
+                "teks_indikator_asli": "Penetapan Ruang Lingkup Sistem Manajemen Mutu"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "SOTK (Struktur Organisasi & Tata Kerja) & Profil Pimpinan/Pejabat",
+        "asesmen_grup_payung": [
+          "Akreditasi",
+          "PPID (Internal)",
+          "ZI",
+          "ISO (Klausul 5.3)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Alamat Lengkap",
+            "tipe_dokumen_disarankan": "Teks / Link Website",
+            "sumber_dokumen_disarankan": "Humas / Bagian Umum",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Berkelanjutan (update jika ada perubahan)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Alamat Lengkap"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Profil Singkat Pimpinan (Rektor, Warek, Dekan, Direktur Pasca)",
+            "tipe_dokumen_disarankan": "PDF / Link Website",
+            "sumber_dokumen_disarankan": "Humas / Kepegawaian",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai Periode Jabatan",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Profil Singkat Pimpinan (Rektor, Warek, Dekan, Direktur Pasca)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Struktur Organisasi",
+            "tipe_dokumen_disarankan": "PDF / Gambar / Link Website",
+            "sumber_dokumen_disarankan": "Ortala / Kepegawaian",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai SOTK Berlaku",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Struktur Organisasi"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) SK SOTK & Tupoksi",
+            "tipe_dokumen_disarankan": "PDF (SK Rektor)",
+            "sumber_dokumen_disarankan": "Ortala / Kepegawaian",
+            "validator_disarankan": "LPM / Tim ZI / Auditor ISO",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai SOTK Berlaku",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 2 (Tata Pamong)"
+              },
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Penataan Tatalaksana (Area 2)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 5.3)",
+                "teks_indikator_asli": "Peran, Tanggung Jawab, dan Wewenang Organisasi"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Perjanjian Kinerja (PK) & Dokumen Kinerja Terkait",
+        "asesmen_grup_payung": [
+          "ZI (Internal)",
+          "ISO (Klausul 6.2 - Bukti Sasaran Mutu)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Dokumen Perjanjian Kinerja",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "Pimpinan Unit / Perencanaan",
+            "validator_disarankan": "Tim ZI / Itjen / KemenPAN-RB",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen Perjanjian Kinerja"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Dokumen Kerangka Logis Kinerja",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "Pimpinan Unit / Perencanaan",
+            "validator_disarankan": "Tim ZI / Itjen / KemenPAN-RB",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen Kerangka Logis Kinera"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Dokumen Pengendalian Aktivitas",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "Pimpinan Unit / Perencanaan",
+            "validator_disarankan": "Tim ZI / Itjen / KemenPAN-RB",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen Pengendalian Aktivitas"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Sasaran Mutu Unit",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "LPM / Pimpinan Unit",
+            "validator_disarankan": "Auditor ISO",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ISO (Klausul 6.2)",
+                "teks_indikator_asli": "Penetapan Sasaran Mutu dan Perencanaan"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Laporan Akuntabilitas Kinerja (LAKIP)",
+        "asesmen_grup_payung": [
+          "ZI",
+          "PPID (Internal)",
+          "Akreditasi"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "LAKIP (Laporan Akuntabilitas Kinerja Instansi Pemerintah)",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "Tim Perencanaan / Pimpinan",
+            "validator_disarankan": "Tim PPID / Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "LAKIP"
+              },
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Pemenuhan Area 4 (Penguatan Akuntabilitas)"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Ketersediaan Laporan Kinerja (LKPT)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Laporan Keuangan (DIPA, RKA-KL, Alokasi Anggaran)",
+        "asesmen_grup_payung": [
+          "PPID (Internal)",
+          "Akreditasi"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Laporan Keuangan (DIPA, RKA-KL, LRA, dll)",
+            "tipe_dokumen_disarankan": "PDF / Link Website",
+            "sumber_dokumen_disarankan": "Bagian Keuangan / Perencanaan",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Laporan Keuangan"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 5 (Keuangan)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Tanda Terima/Bukti Lapor LHKPN & LHKASN",
+        "asesmen_grup_payung": [
+          "ZI (Internal)",
+          "PPID (Internal)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Dokumen Pelaporan LHKPN",
+            "tipe_dokumen_disarankan": "PDF (Tanda Terima)",
+            "sumber_dokumen_disarankan": "Pejabat Ybs / Kepegawaian",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen Pelaporan LHKPN"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Dokumen Pelaporan LHKASN Dokunen Pejabat Administrator",
+            "tipe_dokumen_disarankan": "PDF (Tanda Terima)",
+            "sumber_dokumen_disarankan": "Pejabat Ybs / Kepegawaian",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen Pelaporan LHKASN Dokunen Pejabat Administrator"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Dokumen Pelaporan LHKASN Dokumen Pejabat Pengawas",
+            "tipe_dokumen_disarankan": "PDF (Tanda Terima)",
+            "sumber_dokumen_disarankan": "Pejabat Ybs / Kepegawaian",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen Pelaporan LHKASN Dokumen Pejabat Pengawas"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Dokumen Pelaporan LHKASN Dokumen jabatan fungsional dan pelaksana",
+            "tipe_dokumen_disarankan": "PDF (Tanda Terima)",
+            "sumber_dokumen_disarankan": "Pegawai Ybs / Kepegawaian",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen Pelaporan LHKASN\nDokumen jabatan fungsional dan pelaksana"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "SK Tim Kerja (Tim ZI, Tim PPID, Tim Penjaminan Mutu, dll)",
+        "asesmen_grup_payung": [
+          "ZI (Internal)",
+          "PPID (Internal)",
+          "AMI"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "SK Tim Pengelola ZI",
+            "tipe_dokumen_disarankan": "PDF (SK)",
+            "sumber_dokumen_disarankan": "Pimpinan / Kepegawaian",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "SK Tim Pengelola ZI"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "SK Tim Pengelola PPID",
+            "tipe_dokumen_disarankan": "PDF (SK)",
+            "sumber_dokumen_disarankan": "Pimpinan / Kepegawaian",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "SK Tim Pengelola PPID"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kategori_checklist": "2. Perencanaan & Tatalaksana (SOP & Proses)",
+    "deskripsi_kategori": "Dokumen yang merencanakan dan mengatur jalannya operasional sehari-hari.",
+    "daftar_grup_dokumen": [
+      {
+        "nama_checklist_grup": "Peta Proses Bisnis (Probis)",
+        "asesmen_grup_payung": [
+          "ZI (Internal)",
+          "ISO (Klausul 8.1)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Peta Proses Bisnis",
+            "tipe_dokumen_disarankan": "PDF / Gambar",
+            "sumber_dokumen_disarankan": "Tim ZI / Ortala",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai SOTK Berlaku",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Peta Proses Bisnis"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 8.1)",
+                "teks_indikator_asli": "Perencanaan dan Pengendalian Operasional"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Kumpulan SOP Layanan & Standar Pelayanan",
+        "asesmen_grup_payung": [
+          "AMI",
+          "ZI",
+          "PPID",
+          "Akreditasi",
+          "ISO (Klausul 7.5, 8.1, 8.2)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Daftar SOP",
+            "tipe_dokumen_disarankan": "PDF / Link Website",
+            "sumber_dokumen_disarankan": "Ortala / LPM / Tim PPID",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Berkelanjutan (update jika ada perubahan)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Daftar SOP"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "SOP Layanan Informasi Publik",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "Tim PPID",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai SOTK Berlaku",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "SOP Layanan Informasi Publik"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "SOP Pengelolaan Arsip Dinamis dan Statis",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "Arsiparis / Bagian Umum",
+            "validator_disarankan": "Tim PPID",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai SOTK Berlaku",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "SOP Pengelolaan Arsip Dinamis dan Statis"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "SOP Pengelolaan dan Pelayanan Informasi Publik",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "Tim PPID",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai SOTK Berlaku",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "SOP Pengelolaan dan Pelayanan Informasi Publik"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Standar Pelayanan (SP)",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "Semua Unit Layanan / Tim ZI",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Berkelanjutan (update jika ada perubahan)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Standar Pelayanan"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Kumpulan SOP Akademik & Non-Akademik",
+            "tipe_dokumen_disarankan": "PDF / Link",
+            "sumber_dokumen_disarankan": "LPM / Ortala / Unit Terkait",
+            "validator_disarankan": "LPM / Auditor ISO / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai SOTK Berlaku",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Ketersediaan SOP Layanan"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Ketersediaan SOP Layanan (Kriteria 2, 6)"
+              },
+              {
+                "jenis_asesmen": "ISO",
+                "teks_indikator_asli": "Informasi Terdokumentasi (Klausul 7.5, 8.1, 8.2)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Roadmap (Peta Jalan) Penelitian & PkM",
+        "asesmen_grup_payung": [
+          "Akreditasi",
+          "AMI (Internal)",
+          "ISO (Klausul 8.3 - Desain)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Roadmap Penelitian",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "LP2M / Prodi",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "4-5 Tahun (Sesuai Renstra)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Roadmap Penelitian"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 7 (Penelitian)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Roadmap PkM",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "LP2M / Prodi",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "4-5 Tahun (Sesuai Renstra)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Roadmap PkM"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 8 (PkM)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Dokumen Manajemen Risiko (Manris)",
+        "asesmen_grup_payung": [
+          "ISO (Klausul 6.1)",
+          "ZI",
+          "AMI (Internal)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Manajemen Risiko pada Pusat Bahasa",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "Pusat Bahasa",
+            "validator_disarankan": "SPI / LPM",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Manajemen Risiko pada Pusat Bahasa"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Manajemen Risiko SPI",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "SPI (Satuan Pengawas Internal)",
+            "validator_disarankan": "SPI",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Manajemen Risiko SPI"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Identifikasi Risiko & Peluang (Institusi/Unit)",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "SPI / Tim ZI / LPM",
+            "validator_disarankan": "Auditor ISO / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ISO (Klausul 6.1)",
+                "teks_indikator_asli": "Tindakan untuk Mengatasi Risiko dan Peluang"
+              },
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Penerapan Manajemen Risiko (Area 5)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Bukti e-Office & Aksesibilitas Website (termasuk PPID)",
+        "asesmen_grup_payung": [
+          "PPID (Internal)",
+          "ZI"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Aksesibilitas Website PPID",
+            "tipe_dokumen_disarankan": "Link Website / Screenshot",
+            "sumber_dokumen_disarankan": "Tim PPID / PTIPD",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Berkelanjutan",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Aksesibilitas Website PPID"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Bukti Implementasi e-Office",
+            "tipe_dokumen_disarankan": "Screenshot / Laporan",
+            "sumber_dokumen_disarankan": "PTIPD / Tim ZI",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Berkelanjutan",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Penerapan SPBE (Area 2)"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kategori_checklist": "3. Sumber Daya (Manusia & Aset)",
+    "deskripsi_kategori": "Dokumen yang berkaitan dengan pengelolaan SDM, sarana, dan prasarana.",
+    "daftar_grup_dokumen": [
+      {
+        "nama_checklist_grup": "Profil, Data, & SK Pengangkatan Dosen & Tendik",
+        "asesmen_grup_payung": [
+          "Akreditasi"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Data Profil Dosen (Ijazah, Serdos, Jabatan Fungsional)",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "Kepegawaian / SDM",
+            "validator_disarankan": "LPM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Semester (Update)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 4 (SDM)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "SK Pengangkatan Dosen Tetap & Tendik",
+            "tipe_dokumen_disarankan": "PDF (SK)",
+            "sumber_dokumen_disarankan": "Kepegawaian / SDM",
+            "validator_disarankan": "LPM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai Masa Berlaku SK",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 4 (SDM)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Sasaran Kinerja Pegawai (SKP) & Bukti Evaluasinya",
+        "asesmen_grup_payung": [
+          "ZI",
+          "AMI (Internal)",
+          "ISO (Klausul 7.2 - Kompetensi)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "SKP (Sasaran Kinerja Pegawai)",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "Pegawai Ybs / Kepegawaian",
+            "validator_disarankan": "Atasan Langsung / SPI",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "SKP"
+              },
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Penerapan Kinerja Individu (Area 3)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Bukti evaluasi kompetensi sesuai dengan struktur SPI",
+            "tipe_dokumen_disarankan": "PDF (Laporan)",
+            "sumber_dokumen_disarankan": "SPI",
+            "validator_disarankan": "SPI",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Bukti evaluasi kompetensi sesuai dengan struktur SPI"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Laporan BKD (Beban Kerja Dosen)",
+        "asesmen_grup_payung": [
+          "Akreditasi",
+          "AMI"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Laporan BKD (LKD/SKD) Dosen",
+            "tipe_dokumen_disarankan": "PDF (Laporan)",
+            "sumber_dokumen_disarankan": "Dosen Ybs / Kepegawaian",
+            "validator_disarankan": "Asesor BKD / LPM",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Semester",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 4 (SDM)"
+              },
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Kesesuaian Pelaksanaan BKD"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Bukti/Rekaman Kompetensi (Pelatihan, Seminar, Sertifikasi)",
+        "asesmen_grup_payung": [
+          "Akreditasi",
+          "AMI (Internal)",
+          "ISO (Klausul 7.2)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Bukti pemenuhan kompetensi untuk personil yang ada di pusat bahasa",
+            "tipe_dokumen_disarankan": "PDF (Sertifikat, Ijazah)",
+            "sumber_dokumen_disarankan": "Pusat Bahasa / Pegawai Ybs",
+            "validator_disarankan": "SPI / LPM",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Sesuai Masa Berlaku Sertifikat",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Bukti pemenuhan kompetensi untuk personil yang ada di pusat bahasa"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Pengembangan Kompetensi",
+            "tipe_dokumen_disarankan": "PDF (Laporan, Sertifikat, SK Tugas Belajar)",
+            "sumber_dokumen_disarankan": "Kepegawaian / SDM",
+            "validator_disarankan": "SPI / LPM",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Kegiatan",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Pengembangan Kompetensi"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Rekaman Kompetensi SDM",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "Kepegawaian / SDM",
+            "validator_disarankan": "Auditor ISO / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Berkelanjutan (update per semester)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 4 (SDM)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 7.2)",
+                "teks_indikator_asli": "Bukti Kompetensi Personil"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Dokumentasi Reward & Punishment Pegawai",
+        "asesmen_grup_payung": [
+          "ZI (Internal)",
+          "ISO (Klausul 7.3 - Kesadaran)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Dokumentasi Reward dan punishment",
+            "tipe_dokumen_disarankan": "PDF (SK, Laporan, Foto)",
+            "sumber_dokumen_disarankan": "Kepegawaian / Pimpinan Unit",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumentasi Reward dan punishment"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 7.3)",
+                "teks_indikator_asli": "Bukti Kesadaran Personil (terkait Konsekuensi)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Rekaman/Laporan Pemeliharaan Aset & Infrastruktur",
+        "asesmen_grup_payung": [
+          "AMI (Internal)",
+          "Akreditasi",
+          "ISO (Klausul 7.1.3)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Bukti pemeliharaan inventaris infrastruktur",
+            "tipe_dokumen_disarankan": "PDF (Logbook, Laporan, Foto)",
+            "sumber_dokumen_disarankan": "Bagian Umum / Sarpras",
+            "validator_disarankan": "SPI / LPM",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Kegiatan / Per Semester",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Bukti pemeliharaan inventaris infrastruktur"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Bukti implementasi kebijakan sarana prasarana",
+            "tipe_dokumen_disarankan": "PDF (Laporan, Foto)",
+            "sumber_dokumen_disarankan": "Bagian Umum / Sarpras / Fakultas",
+            "validator_disarankan": "SPI / LPM",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Bukti implementasi kebijakan sarana prasarana"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Daftar Inventaris & Laporan Pemeliharaan Sarpras",
+            "tipe_dokumen_disarankan": "PDF / XLSX",
+            "sumber_dokumen_disarankan": "Bagian Umum / Sarpras",
+            "validator_disarankan": "Auditor ISO / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Semester (Update)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 5 (Sarpras)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 7.1.3)",
+                "teks_indikator_asli": "Bukti Pemeliharaan Infrastruktur"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kategori_checklist": "4. Pelaksanaan Tridharma & Layanan",
+    "deskripsi_kategori": "Bukti nyata dari pelaksanaan proses inti: pendidikan, penelitian, dan PkM.",
+    "daftar_grup_dokumen": [
+      {
+        "nama_checklist_grup": "Dokumen Kurikulum (SK, RPS, Kontrak Kuliah)",
+        "asesmen_grup_payung": [
+          "Akreditasi",
+          "AMI (Internal)",
+          "ISO (Klausul 8.3/8.5)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Dokumen Kurikulum (SK, Panduan, Matriks MK)",
+            "tipe_dokumen_disarankan": "PDF",
+            "sumber_dokumen_disarankan": "Prodi / Fakultas",
+            "validator_disarankan": "LPM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "4-5 Tahun (Siklus Kurikulum)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Dokumen Kurikulum"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 6 (Pendidikan)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 8.3)",
+                "teks_indikator_asli": "Desain dan Pengembangan Produk/Jasa"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "RPS & Kontrak Perkuliahan Setiap Mata Kuliah",
+            "tipe_dokumen_disarankan": "PDF (Kumpulan)",
+            "sumber_dokumen_disarankan": "Dosen Ybs / Prodi",
+            "validator_disarankan": "LPM / GKM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Semester",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Dokumen Kurikulum"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 6 (Pendidikan)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 8.5)",
+                "teks_indikator_asli": "Pengendalian Produksi dan Penyediaan Jasa"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Jurnal Perkuliahan / Logbook / Bukti Aktivitas di LMS",
+        "asesmen_grup_payung": [
+          "AMI (Internal)",
+          "Akreditasi",
+          "ISO (Klausul 8.5 - Pengendalian Proses)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Bentuk interaksi antara dosen, mahasiswa dan sumber belajar",
+            "tipe_dokumen_disarankan": "PDF (Screenshot LMS, Jurnal, Absensi)",
+            "sumber_dokumen_disarankan": "Dosen Ybs / Prodi / PTIPD",
+            "validator_disarankan": "LPM / GKM",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Semester",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Bentuk interaksi antara dosen, mahasiswa dan sumber belajar"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Bukti Proses Pembelajaran (Kriteria 6)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 8.5)",
+                "teks_indikator_asli": "Pengendalian Produksi dan Penyediaan Jasa"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Laporan & Bukti Publikasi Ilmiah/Sitasi/HKI (Dosen & Mhs)",
+        "asesmen_grup_payung": [
+          "AMI (Internal)",
+          "Akreditasi"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Artikel Karya Ilmiah DTPS yang disitasi (RS)",
+            "tipe_dokumen_disarankan": "PDF / Link URL",
+            "sumber_dokumen_disarankan": "Dosen Ybs / LP2M",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "3-5 Tahun Terakhir",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Artikel Karya Ilmiah DTPS yang disitasi (RS)"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 7 & 9 (Penelitian & Luaran)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Publikasi Ilmiah DTPS (Jurnal Internasional Bereputasi, dll)",
+            "tipe_dokumen_disarankan": "PDF / Link URL",
+            "sumber_dokumen_disarankan": "Dosen Ybs / LP2M",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "3-5 Tahun Terakhir",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Publikasi Ilmiah DTPS (Jurnal Internasional Bereputasi, dll)"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 7 & 9 (Penelitian & Luaran)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Publikasi Ilmiah DTPS (Seminar Wilayah/Lokal, dll)",
+            "tipe_dokumen_disarankan": "PDF / Link URL",
+            "sumber_dokumen_disarankan": "Dosen Ybs / LP2M",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "3-5 Tahun Terakhir",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Publikasi Ilmiah DTPS (Seminar Wilayah/Lokal, dll)"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 7 & 9 (Penelitian & Luaran)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "HKI (Paten, Paten Sederhana) yang Dihasilkan DTPS",
+            "tipe_dokumen_disarankan": "PDF (Sertifikat HKI)",
+            "sumber_dokumen_disarankan": "Dosen Ybs / LP2M",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "3-5 Tahun Terakhir",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "HKI (Paten, Paten Sederhana) yang Dihasilkan DTPS"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 7 & 9 (Penelitian & Luaran)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "HKI (Hak Cipta, Desain Produk Industri, dll) yang Dihasilkan DTPS",
+            "tipe_dokumen_disarankan": "PDF (Sertifikat HKI)",
+            "sumber_dokumen_disarankan": "Dosen Ybs / LP2M",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "3-5 Tahun Terakhir",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "HKI (Hak Cipta, Desain Produk Industri, dll) yang Dihasilkan DTPS"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 7 & 9 (Penelitian & Luaran)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Laporan Pelaksanaan PkM & Bukti Pemanfaatan oleh Mitra",
+        "asesmen_grup_payung": [
+          "AMI (Internal)",
+          "Akreditasi"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Artikel Karya Ilmiah DTPS hasil PkM yang disitasi",
+            "tipe_dokumen_disarankan": "PDF / Link URL",
+            "sumber_dokumen_disarankan": "Dosen Ybs / LP2M",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "3-5 Tahun Terakhir",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Artikel Karya Ilmiah DTPS hasil PkM yang disitasi"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 8 & 9 (PkM & Luaran)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Aspek Penilaian PkM",
+            "tipe_dokumen_disarankan": "PDF (Laporan PkM)",
+            "sumber_dokumen_disarankan": "Dosen Ybs / LP2M",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "3-5 Tahun Terakhir",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Aspek Penilaian PkM"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 8 & 9 (PkM & Luaran)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "PkM DTPS yang diadopsi masyarakat",
+            "tipe_dokumen_disarankan": "PDF (Laporan, Bukti Foto, Surat Keterangan Mitra)",
+            "sumber_dokumen_disarankan": "Dosen Ybs / LP2M",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "3-5 Tahun Terakhir",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "PkM DTPS yang diadopsi masyarakat"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 8 & 9 (PkM & Luaran)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "PkM DTPS yang mendapat pengakuan HKI",
+            "tipe_dokumen_disarankan": "PDF (Sertifikat HKI)",
+            "sumber_dokumen_disarankan": "Dosen Ybs / LP2M",
+            "validator_disarankan": "LPM / LP2M / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "3-5 Tahun Terakhir",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "PkM DTPS yang mendapat pengakuan HKI"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Pemenuhan Kriteria 8 & 9 (PkM & Luaran)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Dokumen Informasi Layanan (Beasiswa, UKT, KIP, dll)",
+        "asesmen_grup_payung": [
+          "PPID (Internal)",
+          "Akreditasi (Layanan Mhs)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Beasiswa, Hibah, UKT, KIP, dll",
+            "tipe_dokumen_disarankan": "PDF (Pengumuman, SK) / Link Website",
+            "sumber_dokumen_disarankan": "Bagian Kemahasiswaan / Akademik",
+            "validator_disarankan": "Tim PPID / Komisi Informasi",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Semester / Per Tahun Anggaran",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Beasiswa, Hibah, UKT, KIP, dll"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Layanan Kemahasiswaan (Kriteria 3)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Bukti Yudisium, Ijazah, Transkrip (Rekaman Pelepasan Jasa)",
+        "asesmen_grup_payung": [
+          "Akreditasi",
+          "ISO (Klausul 8.6)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "SK Yudisium & Daftar Lulusan",
+            "tipe_dokumen_disarankan": "PDF (SK)",
+            "sumber_dokumen_disarankan": "Fakultas / Prodi",
+            "validator_disarankan": "LPM / Auditor ISO / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Periode Yudisium",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Data Lulusan (Kriteria 3 & 9)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 8.6)",
+                "teks_indikator_asli": "Pelepasan Produk dan Jasa"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kategori_checklist": "5. Evaluasi, Umpan Balik & Peningkatan",
+    "deskripsi_kategori": "Dokumen yang membuktikan adanya siklus perbaikan berkelanjutan (PPEPP).",
+    "daftar_grup_dokumen": [
+      {
+        "nama_checklist_grup": "Laporan Survei Kepuasan & Analisis Tindak Lanjutnya",
+        "asesmen_grup_payung": [
+          "AMI (Internal)",
+          "ZI",
+          "Akreditasi",
+          "ISO (Klausul 9.1.2)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Analisis dan tindak lanjut pengukuran kepuasan mahasiswa",
+            "tipe_dokumen_disarankan": "PDF (Laporan Survei & RTL)",
+            "sumber_dokumen_disarankan": "LPM / GKM / Prodi",
+            "validator_disarankan": "LPM / SPI",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Semester / 1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Analisis dan tindak lanjut pengukuran kepuasan mahasiswa"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Hasil Pengukuran Kepuasan Pengguna",
+            "tipe_dokumen_disarankan": "PDF (Laporan Survei & RTL)",
+            "sumber_dokumen_disarankan": "LPM / Unit Terkait",
+            "validator_disarankan": "LPM / SPI",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Hasil Pengukuran Kepuasan Pengguna"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Survei Kepuasan Masyarakat (SKM)",
+            "tipe_dokumen_disarankan": "PDF (Laporan Survei & RTL)",
+            "sumber_dokumen_disarankan": "Tim ZI / LPM",
+            "validator_disarankan": "Tim ZI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Semester / 1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Survei Kepuasan Masyarakat (Area 6)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Survei Kepuasan Pengguna Lulusan",
+            "tipe_dokumen_disarankan": "PDF (Laporan Survei & RTL)",
+            "sumber_dokumen_disarankan": "LPM / Pusat Karir",
+            "validator_disarankan": "LPM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Kepuasan Pengguna (Kriteria 9)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 9.1.2)",
+                "teks_indikator_asli": "Pemantauan Kepuasan Pelanggan"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Laporan Tracer Study Lulusan",
+        "asesmen_grup_payung": [
+          "Akreditasi"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Laporan Tracer Study (Masa Tunggu, Kesesuaian Bidang Kerja)",
+            "tipe_dokumen_disarankan": "PDF (Laporan)",
+            "sumber_dokumen_disarankan": "Pusat Karir / Kemahasiswaan",
+            "validator_disarankan": "LPM / Asesor Eksternal",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Luaran Lulusan (Kriteria 9)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Laporan Audit Internal (AMI) & Rekaman Tinjauan Manajemen (RTM)",
+        "asesmen_grup_payung": [
+          "AMI (Internal)",
+          "Akreditasi",
+          "ISO (Klausul 9.2, 9.3)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Audit Mutu Internal",
+            "tipe_dokumen_disarankan": "PDF (Laporan AMI, Daftar Tilik)",
+            "sumber_dokumen_disarankan": "LPM",
+            "validator_disarankan": "LPM / Pimpinan",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Siklus (1 Tahun)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Audit Mutu Internal"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Bukti Siklus PPEPP (Kriteria 2)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 9.2)",
+                "teks_indikator_asli": "Pelaksanaan Audit Internal"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Laporan Hasil RTM (Rapat Tinjauan Manajemen)",
+            "tipe_dokumen_disarankan": "PDF (Notulensi, Daftar Hadir, Laporan)",
+            "sumber_dokumen_disarankan": "LPM",
+            "validator_disarankan": "LPM / Pimpinan",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Siklus (1 Tahun)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Laporan Hasil RTM"
+              },
+              {
+                "jenis_asesmen": "Akreditasi",
+                "teks_indikator_asli": "Bukti Siklus PPEPP (Kriteria 2)"
+              },
+              {
+                "jenis_asesmen": "ISO (Klausul 9.3)",
+                "teks_indikator_asli": "Rekaman Tinjauan Manajemen"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Laporan Evaluasi Kinerja (dari SPI) & Laporan SPIP",
+        "asesmen_grup_payung": [
+          "AMI (Internal)",
+          "ZI"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Laporan evaluasi kinerja personil di pusba",
+            "tipe_dokumen_disarankan": "PDF (Laporan)",
+            "sumber_dokumen_disarankan": "SPI",
+            "validator_disarankan": "SPI / Pimpinan",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Laporan evaluasi kinerja personil di pusba"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Laporan Tahunan SPIP",
+            "tipe_dokumen_disarankan": "PDF (Laporan)",
+            "sumber_dokumen_disarankan": "SPI",
+            "validator_disarankan": "SPI / Itjen",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Laporan Tahunan SPIP"
+              },
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Pemenuhan Area 5 (Penguatan Pengawasan)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "SOP Pengelolaan Pengaduan & Laporan/Rekaman Penanganan Pengaduan",
+        "asesmen_grup_payung": [
+          "ZI (Internal)",
+          "PPID (Internal)",
+          "ISO (Klausul 10.2 - Ketidaksesuaian)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Dokumen pengaduan masyarakat (Belum di tindaklanjuti)",
+            "tipe_dokumen_disarankan": "PDF / Screenshot",
+            "sumber_dokumen_disarankan": "Tim Pengelola Pengaduan (PPID/ZI/WBS)",
+            "validator_disarankan": "Tim PPID / Tim ZI",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Berkelanjutan (Live)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Dokumen pengaduan masyarakat (Belum di tindaklanjuti)"
+              },
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen pengaduan masyarakat (Belum di tindaklanjuti)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Dokumen Pengaduan masyarakat (Proses)",
+            "tipe_dokumen_disarankan": "PDF / Screenshot",
+            "sumber_dokumen_disarankan": "Tim Pengelola Pengaduan (PPID/ZI/WBS)",
+            "validator_disarankan": "Tim PPID / Tim ZI",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Berkelanjutan (Live)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Dokumen Pengaduan masyarakat (Proses)"
+              },
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen Pengaduan masyarakat (Proses)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "Dokumen Pengaduan masyarakat (selesai tindak lanjut)",
+            "tipe_dokumen_disarankan": "PDF (Laporan / Rekap)",
+            "sumber_dokumen_disarankan": "Tim Pengelola Pengaduan (PPID/ZI/WBS)",
+            "validator_disarankan": "Tim PPID / Tim ZI",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Berkelanjutan (Live)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "PPID",
+                "teks_indikator_asli": "Dokumen Pengaduan masyarakat (selesai tindak lanjut)"
+              },
+              {
+                "jenis_asesmen": "ZI",
+                "teks_indikator_asli": "Dokumen Pengaduan masyarakat (selesai tindak lanjut)"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Rekaman Penanganan Keluhan/Ketidaksesuaian",
+            "tipe_dokumen_disarankan": "PDF (Laporan / Rekap)",
+            "sumber_dokumen_disarankan": "LPM / Unit Terkait",
+            "validator_disarankan": "Auditor ISO",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "1 Tahun",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ISO (Klausul 10.2)",
+                "teks_indikator_asli": "Penanganan Ketidaksesuaian dan Tindakan Korektif"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "nama_checklist_grup": "Laporan Monitoring Tindak Lanjut Rekomendasi (Audit) & Tindakan Korektif",
+        "asesmen_grup_payung": [
+          "AMI (Internal)",
+          "ISO (Klausul 10.2)"
+        ],
+        "item_dokumen": [
+          {
+            "nama_dokumen": "Bukti monitoring rekomendasi",
+            "tipe_dokumen_disarankan": "PDF (Laporan RTL)",
+            "sumber_dokumen_disarankan": "SPI / LPM",
+            "validator_disarankan": "SPI / Pimpinan",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Siklus (1 Tahun)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "AMI",
+                "teks_indikator_asli": "Bukti monitoring rekomendasi"
+              }
+            ]
+          },
+          {
+            "nama_dokumen": "(Dokumen Payung) Rekaman Tindakan Korektif",
+            "tipe_dokumen_disarankan": "PDF (Laporan RTL)",
+            "sumber_dokumen_disarankan": "LPM / Unit Terkait",
+            "validator_disarankan": "Auditor ISO",
+            "tanggal_bulan_diunggah": null,
+            "masa_berlaku_dokumen": "Per Siklus (1 Tahun)",
+            "indikator_asesmen": [
+              {
+                "jenis_asesmen": "ISO (Klausul 10.2)",
+                "teks_indikator_asli": "Penanganan Ketidaksesuaian dan Tindakan Korektif"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+
