@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kompilasi Checklist Dokumen Asesmen PTKIN</title>
+    <!-- Memuat Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Style tambahan untuk font dan tampilan */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="max-w-6xl mx-auto p-4 sm:p-8">
+        <header class="mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-blue-800 mb-2">Kompilasi Checklist Dokumen Asesmen PTKIN</h1>
+            <p class="text-lg text-gray-700">Ini adalah rangkuman daftar dokumen utama (checklist) untuk berbagai asesmen di Perguruan Tinggi,
+                disertai contoh nyata dari hasil pencarian.</p>
+        </header>
+
+        <!-- Navigasi Tab -->
+        <div class="mb-4 border-b border-gray-300">
+            <nav class="flex flex-wrap -mb-px" aria-label="Tabs">
+                <button onclick="changeTab(event, 'zi')" class="tab-button active bg-blue-600 text-white rounded-t-lg whitespace-nowrap py-3 px-5 text-sm sm:text-base font-medium border-b-2 border-transparent">
+                    Zona Integritas (ZI)
+                </button>
+                <button onclick="changeTab(event, 'ami')" class="tab-button bg-gray-200 text-gray-700 rounded-t-lg whitespace-nowrap py-3 px-5 text-sm sm:text-base font-medium border-b-2 border-transparent">
+                    AMI (Audit Mutu Internal)
+                </button>
+                <button onclick="changeTab(event, 'akreditasi')" class="tab-button bg-gray-200 text-gray-700 rounded-t-lg whitespace-nowrap py-3 px-5 text-sm sm:text-base font-medium border-b-2 border-transparent">
+                    Akreditasi (9 Kriteria)
+                </button>
+                <button onclick="changeTab(event, 'ppid')" class="tab-button bg-gray-200 text-gray-700 rounded-t-lg whitespace-nowrap py-3 px-5 text-sm sm:text-base font-medium border-b-2 border-transparent">
+                    PPID
+                </button>
+                <button onclick="changeTab(event, 'iso')" class="tab-button bg-gray-200 text-gray-700 rounded-t-lg whitespace-nowrap py-3 px-5 text-sm sm:text-base font-medium border-b-2 border-transparent">
+                    ISO 9001:2015
+                </button>
+            </nav>
+        </div>
+
+        <!-- Konten Tab -->
+        <main>
+            <!-- 1. Konten Zona Integritas (ZI) -->
+            <div id="zi" class="tab-content active">
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-blue-700 mb-4">Zona Integritas (ZI-WBK/WBBM)</h2>
+                    <p class="mb-6">Fokus pada 6 Area Pengungkit. Dokumen utamanya adalah **Lembar Kerja Evaluasi (LKE)** yang berisi daftar bukti dukung (dokumen pengungkit) yang sangat rinci.</p>
+                    
+                    <h3 class="text-xl font-semibold mb-3">Checklist Dokumen Pengungkit Utama (Per Area):</h3>
+                    <ul class="list-disc list-inside space-y-3 mb-6">
+                        <li><strong>Manajemen Perubahan:</strong> SK Tim Kerja ZI, Dokumen Rencana Pembangunan ZI, Laporan Sosialisasi (Undangan, Foto, Notulensi), SK Agen Perubahan.</li>
+                        <li><strong>Penataan Tatalaksana:</strong> Peta Proses Bisnis (Probis), Daftar SOP yang mengacu Probis, Bukti implementasi e-Office (e-persuratan, dll).</li>
+                        <li><strong>Penataan Manajemen SDM:</strong> Analisis Jabatan (Anjab) & Analisis Beban Kerja (ABK), Dokumen SKP berbasis IT, Laporan mutasi/rotasi, Bukti penerapan kode etik.</li>
+                        <li><strong>Penguatan Akuntabilitas:</strong> Dokumen Perjanjian Kinerja (PK) Pimpinan, Laporan Akuntabilitas Kinerja (LAKIP/Laporan Kinerja), Laporan monitoring capaian kinerja.</li>
+                        <li><strong>Penguatan Pengawasan:</strong> Laporan implementasi SPIP, SOP dan bukti *Whistleblowing System* (WBS), SOP penanganan benturan kepentingan, Bukti pelaporan LHKPN/LHKASN.</li>
+                        <li><strong>Peningkatan Kualitas Pelayanan Publik:</strong> Standar Pelayanan (SP) untuk semua layanan, Maklumat Pelayanan, Laporan Survei Kepuasan Masyarakat (SKM) dan tindak lanjutnya, SOP pengelolaan pengaduan.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-3">Contoh Tautan Referensi:</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>
+                            <a href="https://pn-rengat.go.id/images/file/LKE%20ZI%202024.pdf" target="_blank" class="text-blue-600 hover:underline">Contoh LKE ZI dari PN Rengat (PDF)</a> - Menunjukkan format LKE elektronik yang sangat rinci.
+                        </li>
+                        <li>
+                            <a href="https://arsip.kemenagkarangasem.id/arsip/xFoU7DqUqXCg9a7k9vL0SW2K9tkfVQsAG1WBYLRv.pdf" target="_blank" class="text-blue-600 hover:underline">Contoh Rencana Kerja Pembangunan ZI Kemenag (PDF)</a> - Menunjukkan dokumen perencanaan ZI di lingkungan Kemenag.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. Konten AMI -->
+            <div id="ami" class="tab-content">
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-blue-700 mb-4">Audit Mutu Internal (AMI)</h2>
+                    <p class="mb-6">Instrumen utamanya adalah **Daftar Tilik** (atau Borang AMI) yang dibuat oleh LPM kampus Anda. Daftar tilik ini mengacu pada **Standar SPMI** internal (yang biasanya sejalan dengan 9 Kriteria Akreditasi).</p>
+                    
+                    <h3 class="text-xl font-semibold mb-3">Contoh Poin Checklist dalam Daftar Tilik (Per Standar/Kriteria):</h3>
+                    <ul class="list-disc list-inside space-y-3 mb-6">
+                        <li><strong>Standar VMTS:</strong> Apakah VMTS sudah disahkan? Apakah ada bukti sosialisasi VMTS?</li>
+                        <li><strong>Standar Tata Pamong:</strong> Apakah SOTK sudah disahkan? Apakah dokumen SPMI (Kebijakan, Manual, Standar, Formulir) lengkap?</li>
+                        <li><strong>Standar Mahasiswa:</strong> Apakah SOP layanan mahasiswa (bimbingan, beasiswa) ada dan dilaksanakan?</li>
+                        <li><strong>Standar SDM:</strong> Apakah ada bukti pengembangan SDM (pelatihan, seminar)? Apakah evaluasi BKD/SKP dilaksanakan?</li>
+                        <li><strong>Standar Pendidikan:</strong> Apakah kurikulum, RPS, dan kontrak kuliah tersedia? Apakah ada bukti monitoring perkuliahan (jurnal, presensi)? Apakah ada laporan evaluasi dosen oleh mahasiswa?</li>
+                        <li><strong>Standar Penelitian:</strong> Apakah *roadmap* penelitian tersedia? Apakah ada laporan penelitian dosen? Apakah ada bukti publikasi?</li>
+                        <li><strong>Standar PkM:</strong> Apakah *roadmap* PkM tersedia? Apakah ada laporan PkM dosen?</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-3">Contoh Tautan Referensi:</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>
+                            <a href="https://lpm.uinsalatiga.ac.id/wp-content/uploads/2020/08/Instrumen-AMI-9-Kriteria.pdf" target="_blank" class="text-blue-600 hover:underline">Instrumen AMI (9 Kriteria) dari UIN Salatiga (PDF)</a> - Contoh borang/daftar tilik AMI yang sangat lengkap berdasarkan 9 Kriteria.
+                        </li>
+                        <li>
+                            <a href="https://lpm.uinkhas.ac.id/unduh/LAPORAN%20AKHIR%20AMI%20LENGKAP%202023%20REVISI.pdf" target="_blank" class="text-blue-600 hover:underline">Laporan AMI UIN KHAS Jember (PDF)</a> - Menunjukkan daftar dokumen pendukung AMI (termasuk untuk ISO) di halaman-halaman awal.
+                        </li>
+                        <li>
+                            <a href="https://fpt.uho.ac.id/wp-content/uploads/2025/02/SOP-AUDIT-MUTU-INTERNAL.pdf" target="_blank" class="text-blue-600 hover:underline">SOP dan Contoh Daftar Tilik AMI dari Univ. Halu Oleo (PDF)</a> - Memberikan contoh format daftar tilik.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 3. Konten Akreditasi -->
+            <div id="akreditasi" class="tab-content">
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-blue-700 mb-4">Akreditasi (IAPT/IAPS 9 Kriteria)</h2>
+                    <p class="mb-6">Dokumen utama adalah **Laporan Evaluasi Diri (LED)** dan **Laporan Kinerja (LKPT/LKPS)**. Checklist dokumennya adalah semua data dan bukti yang diperlukan untuk mengisi laporan tersebut, yang dirangkum dalam **Matriks Penilaian**.</p>
+                    
+                    <h3 class="text-xl font-semibold mb-3">Checklist Dokumen Bukti Utama (Per Kriteria):</h3>
+                    <ul class="list-disc list-inside space-y-3 mb-6">
+                        <li><strong>Kriteria 1 (VMTS):</strong> SK VMTS, Bukti sosialisasi, Dokumen Analisis SWOT/Lingkungan.</li>
+                        <li><strong>Kriteria 2 (Tata Pamong):</strong> SOTK, Dokumen SPMI lengkap (Kebijakan, Manual, Standar, Formulir), Laporan Audit Internal (AMI), MoU & MoA & Laporan Implementasi (IA).</li>
+                        <li><strong>Kriteria 3 (Mahasiswa):</strong> SOP & Data seleksi Maba, Data mahasiswa, Dokumen layanan kemahasiswaan, Bukti prestasi mahasiswa.</li>
+                        <li><strong>Kriteria 4 (SDM):</strong> Data Dosen (Ijazah, Serdos, Jafung), SK Dosen & Tendik, Laporan BKD, Bukti pengembangan SDM.</li>
+                        <li><strong>Kriteria 5 (Keuangan, Sarana):</strong> Laporan Keuangan (alokasi dana Tridharma), Data inventaris sarpras, Bukti aksesibilitas layanan (termasuk difabel).</li>
+                        <li><strong>Kriteria 6 (Pendidikan):</strong> SK Kurikulum, RPS, Kontrak Kuliah, Laporan monitoring pembelajaran, Laporan evaluasi dosen, Laporan kepuasan mahasiswa.</li>
+                        <li><strong>Kriteria 7 (Penelitian):</strong> *Roadmap* Penelitian, Laporan penelitian dosen, Bukti publikasi (jurnal, seminar), Bukti HKI.</li>
+                        <li><strong>Kriteria 8 (PkM):</strong> *Roadmap* PkM, Laporan PkM dosen, Bukti publikasi/luaran PkM, Laporan kepuasan mitra.</li>
+                        <li><strong>Kriteria 9 (Luaran):</strong> Data IPK & masa studi, Laporan *Tracer Study*, Laporan kepuasan pengguna lulusan, Bukti luaran penelitian/PkM mahasiswa.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-3">Contoh Tautan Referensi:</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>
+                            <a href="https://lldikti13.kemdikbud.go.id/wp-content/uploads/2020/05/3.-Matriks-Penilaian-IAPT-3.0-PTA-PTS.pdf" target="_blank" class="text-blue-600 hover:underline">Matriks Penilaian IAPT 3.0 (PDF)</a> - Checklist rinci dari LLDIKTI XIII yang digunakan asesor.
+                        </li>
+                        <li>
+                            <a href="https://lamdik.or.id/wp-content/uploads/2025/06/LAMPIRAN-PERLAMDIK-3-2025-BUKU-4-PROGRAM-SARJANA.pdf" target="_blank" class="text-blue-600 hover:underline">Panduan & Matriks Penilaian dari LAMDIK (PDF)</a> - Contoh instrumen dari Lembaga Akreditasi Mandiri Kependidikan.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 4. Konten PPID -->
+            <div id="ppid" class="tab-content">
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-blue-700 mb-4">PPID (Keterbukaan Informasi Publik)</h2>
+                    <p class="mb-6">Dokumen utamanya adalah **Daftar Informasi Publik (DIP)** yang wajib dipublikasikan di website PPID kampus. DIP ini mengkategorikan semua informasi yang dimiliki badan publik.</p>
+                    
+                    <h3 class="text-xl font-semibold mb-3">Checklist Dokumen Utama (Sesuai Kategori DIP):</h3>
+                    <ul class="list-disc list-inside space-y-3 mb-6">
+                        <li><strong>Informasi Berkala:</strong> Laporan Kinerja (LAKIP), Laporan Keuangan (DIPA, RKA-KL), Profil Kampus, Struktur Organisasi, Profil Pimpinan, Laporan LHKPN/LHKASN, Program/Kegiatan yang sedang berjalan.</li>
+                        <li><strong>Informasi Setiap Saat:</strong> Daftar SOP layanan, Informasi rekrutmen pegawai, Regulasi/SK Rektor, Hasil penelitian (yang didanai publik), Daftar Informasi Publik (DIP) itu sendiri.</li>
+                        <li><strong>Informasi Serta Merta:</strong> Informasi terkait bencana/wabah/keadaan darurat di kampus (jika ada).</li>
+                        <li><strong>Informasi Dikecualikan:</strong> Daftar informasi yang dikecualikan melalui Uji Konsekuensi (misal: data pribadi, soal ujian).</li>
+                        <li><strong>Dokumen Pendukung PPID:</strong> SK Tim PPID, SOP Layanan Informasi, Laporan Tahunan Layanan Informasi.</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-3">Contoh Tautan Referensi:</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>
+                            <a href="https://ppid.uin-malang.ac.id/wp-content/uploads/2025/10/DIP-UIN-Maliki-2025-ttd.pdf" target="_blank" class="text-blue-600 hover:underline">Daftar Informasi Publik (DIP) UIN Maulana Malik Ibrahim Malang (PDF)</a> - Contoh DIP yang sangat lengkap dari PTKIN.
+                        </li>
+                         <li>
+                            <a href="https://ppid.uinsgd.ac.id/api/uploads/media/documents/1663420510307.pdf" target="_blank" class="text-blue-600 hover:underline">SOP Penyusunan DIP UIN Sunan Gunung Djati (PDF)</a> - Menjelaskan prosedur pembuatan daftar dokumen.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 5. Konten ISO -->
+            <div id="iso" class="tab-content">
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-blue-700 mb-4">ISO 9001:2015 (Sistem Manajemen Mutu)</h2>
+                    <p class="mb-6">ISO 9001:2015 mensyaratkan "Informasi Terdokumentasi". Ini terbagi menjadi dokumen yang harus "dipelihara" (seperti SOP) dan yang harus "disimpan" (seperti rekaman/bukti).</p>
+                    
+                    <h3 class="text-xl font-semibold mb-3">Checklist Informasi Terdokumentasi Wajib:</h3>
+                    <ul class="list-disc list-inside space-y-3 mb-6">
+                        <li><strong>Wajib Dipelihara (Dokumen Inti):</strong>
+                            <ul>
+                                <li>Ruang Lingkup SMM (Klausul 4.3)</li>
+                                <li>Kebijakan Mutu (Klausul 5.2)</li>
+                                <li>Sasaran Mutu (Klausul 6.2)</li>
+                                <li>SOP lain yang dianggap perlu oleh organisasi (misal: SOP layanan akademik, SOP penelitian, SOP keuangan).</li>
+                                <li>Dokumen Manajemen Risiko (Manris).</li>
+                            </ul>
+                        </li>
+                        <li class="mt-3"><strong>Wajib Disimpan (Rekaman/Bukti):</strong>
+                             <ul>
+                                <li>Rekaman kompetensi SDM (pelatihan, ijazah) (Klausul 7.2)</li>
+                                <li>Rekaman tinjauan persyaratan layanan (Klausul 8.2.3.2)</li>
+                                <li>Rekaman kesesuaian produk/layanan (Klausul 8.6)</li>
+                                <li>Rekaman penanganan ketidaksesuaian/keluhan (Klausul 8.7.2)</li>
+                                <li>Rekaman hasil pemantauan & pengukuran (Klausul 9.1.1)</li>
+                                <li>Rekaman program & hasil Audit Internal (Klausul 9.2)</li>
+                                <li>Rekaman hasil Tinjauan Manajemen (Klausul 9.3)</li>
+                                <li>Rekaman tindakan korektif (Klausul 10.2)</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-3">Contoh Tautan Referensi:</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>
+                            <a href="https://lpm.uinkhas.ac.id/unduh/LAPORAN%20AKHIR%20AMI%20LENGKAP%202023%20REVISI.pdf" target="_blank" class="text-blue-600 hover:underline">Daftar Dokumen Pendukung ISO 9001 di UIN KHAS Jember (PDF)</a> - (Lihat hal. 1) Laporan ini mendaftar dokumen pendukung AMI & ISO, termasuk Kebijakan Mutu, Sasaran Mutu, Manris, dan SOP.
+                        </li>
+                        <li>
+                            <a href="httpsa://lpmpp.unja.ac.id/wp-content/uploads/2023/12/LP3M-POS-MJM-006-Audit-Mutu-Internal.pdf" target="_blank" class="text-blue-600 hover:underline">SOP Audit Internal (Terkait ISO) dari UNJA (PDF)</a> - Menunjukkan dokumen checklist audit, laporan ketidaksesuaian, dan laporan audit sebagai rekaman wajib.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script>
+        // JavaScript sederhana untuk fungsionalitas Tab
+        const allTabs = document.querySelectorAll('.tab-button');
+        const allContents = document.querySelectorAll('.tab-content');
+
+        function changeTab(event, tabId) {
+            // Sembunyikan semua konten
+            allContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Nonaktifkan semua tombol tab
+            allTabs.forEach(tab => {
+                tab.classList.remove('active', 'bg-blue-600', 'text-white');
+                tab.classList.add('bg-gray-200', 'text-gray-700');
+            });
+
+            // Aktifkan tab dan konten yang diklik
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active', 'bg-blue-600', 'text-white');
+            event.currentTarget.classList.remove('bg-gray-200', 'text-gray-700');
+        }
+    </script>
+
+</body>
+</html>
