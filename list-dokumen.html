@@ -50,6 +50,9 @@
                 <button onclick="changeTab(event, 'masterlist')" class="tab-button bg-gray-200 text-gray-700 rounded-t-lg whitespace-nowrap py-3 px-5 text-sm sm:text-base font-medium border-b-2 border-transparent">
                     Master List (Cross-Reference)
                 </button>
+                <button onclick="changeTab(event, 'cross-reference-internal')" class="tab-button bg-gray-200 text-gray-700 rounded-t-lg whitespace-nowrap py-3 px-5 text-sm sm:text-base font-medium border-b-2 border-transparent">
+                    Cross-Reference-Internal
+                </button>
             </nav>
         </div>
 
@@ -157,7 +160,7 @@
                         <li><strong>Informasi Berkala:</strong> Laporan Kinerja (LAKIP), Laporan Keuangan (DIPA, RKA-KL), Profil Kampus, Struktur Organisasi, Profil Pimpinan, Laporan LHKPN/LHKASN, Program/Kegiatan yang sedang berjalan.</li>
                         <li><strong>Informasi Setiap Saat:</strong> Daftar SOP layanan, Informasi rekrutmen pegawai, Regulasi/SK Rektor, Hasil penelitian (yang didanai publik), Daftar Informasi Publik (DIP) itu sendiri.</li>
                         <li><strong>Informasi Serta Merta:</strong> Informasi terkait bencana/wabah/keadaan darurat di kampus (jika ada).</li>
-                        <li><strong>Informasi Dikecualikan:</strong> Daftar informasi yang dikecualikan melalui Uji Konsekuensi (misal: data pribadi, soal ujian).</li>
+                        <li><strong>Informasi Dikekecualikan:</strong> Daftar informasi yang dikecualikan melalui Uji Konsekuensi (misal: data pribadi, soal ujian).</li>
                         <li><strong>Dokumen Pendukung PPID:</strong> SK Tim PPID, SOP Layanan Informasi, Laporan Tahunan Layanan Informasi.</li>
                     </ul>
 
@@ -216,7 +219,7 @@
                 </div>
             </div>
 
-            <!-- 6. KONTEN BARU: MASTER LIST -->
+            <!-- 6. KONTEN MASTER LIST -->
             <div id="masterlist" class="tab-content">
                 <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md">
                     <h2 class="text-2xl font-bold text-blue-700 mb-4">Master List (Cross-Reference)</h2>
@@ -289,6 +292,78 @@
                                 <li><strong>Bukti Pengawasan & Evaluasi:</strong> (Laporan Audit Internal (AMI), Rekaman Tinjauan Manajemen (RTM), Laporan SPIP, Rekaman Penanganan Ketidaksesuaian/Keluhan, Rekaman Tindakan Korektif) (ZI, AMI, Akreditasi, ISO)</li>
                                 <li><strong>Bukti Pelaksanaan PPID:</strong> (Daftar Informasi Publik (DIP), Laporan Tahunan Layanan Informasi) (PPID)</li>
                                 <li><strong>Bukti Lainnya:</strong> (Laporan Sosialisasi, Bukti e-Office, Data Maba, Bukti Prestasi Mahasiswa, Data Inventaris, MoU, MoA, Laporan IA) (ZI, Akreditasi)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 7. KONTEN BARU: CROSS-REFERENCE-INTERNAL -->
+            <div id="cross-reference-internal" class="tab-content">
+                <div class="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+                    <h2 class="text-2xl font-bold text-blue-700 mb-4">Cross-Reference-Internal (AMI, ZI, PPID)</h2>
+                    <p class="mb-6">Ini adalah analisis dari file internal Anda (`Rancangan Indikator...`). Daftar ini menerjemahkan indikator proses/konsep dari file Anda menjadi **Dokumen Bukti** yang konkret dan menunjukkan irisannya sesuai data Anda (AMI, ZI, PPID).</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Group 1 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">1. Dokumen Kebijakan & Akuntabilitas</h3>
+                            <p class="text-sm text-gray-600 mb-3">Menerjemahkan indikator seperti: "Dokumen Perjanjian Kinerja", "Dokumen Pelaporan LHKPN", "Laporan Keuangan", "Profil Pimpinan".</p>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>Dokumen Perjanjian Kinerja (PK) Pimpinan:</strong> (Dibutuhkan oleh: <strong>ZI</strong>)</li>
+                                <li><strong>Tanda Terima/Bukti Lapor LHKPN & LHKASN:</strong> (<strong>ZI, PPID</strong>)</li>
+                                <li><strong>Laporan Keuangan (DIPA, RKA-KL):</strong> (<strong>PPID</strong> - sebagai Informasi Berkala)</li>
+                                <li><strong>SK Tim Pengelola (SK Tim ZI, SK Tim PPID):</strong> (<strong>ZI, PPID</strong>)</li>
+                                <li><strong>Profil Pimpinan & Pejabat (Struktur Organisasi):</strong> (<strong>PPID</strong>)</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Group 2 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">2. Dokumen Operasional & Tatalaksana</h3>
+                            <p class="text-sm text-gray-600 mb-3">Menerjemahkan indikator seperti: "Aksesibilitas Website PPID", "Peta Proses Bisnis", "Daftar SOP", "Bukti pemeliharaan inventaris".</p>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>Kumpulan SOP Layanan (Akademik, Keuangan, Umum):</strong> (<strong>ZI, AMI, PPID</strong>)</li>
+                                <li><strong>Peta Proses Bisnis (Probis):</strong> (<strong>ZI</strong>)</li>
+                                <li><strong>Tangkapan Layar (Screenshot) Website PPID & e-Office:</strong> (<strong>ZI, PPID</strong>)</li>
+                                <li><strong>Rekaman/Laporan Pemeliharaan Aset & Infrastruktur:</strong> (<strong>AMI</strong> - Rektorat, Biro, PTID, Klinik)</li>
+                                <li><strong>Standar Pelayanan (SP) & Maklumat Pelayanan:</strong> (<strong>ZI</strong>)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Group 3 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">3. Dokumen SDM & Pengawasan Internal</h3>
+                            <p class="text-sm text-gray-600 mb-3">Menerjemahkan indikator seperti: "Bukti evaluasi kompetensi...", "Dokumentasi Reward dan punishment", "Bukti monitoring rekomendasi".</p>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>Sasaran Kinerja Pegawai (SKP) & Bukti Evaluasinya:</strong> (<strong>ZI, AMI</strong>)</li>
+                                <li><strong>Laporan Evaluasi Kinerja (misal: dari SPI):</strong> (<strong>AMI</strong> - SPI)</li>
+                                <li><strong>Laporan Monitoring Tindak Lanjut Rekomendasi (Audit):</strong> (<strong>AMI</strong> - SPI)</li>
+                                <li><strong>Dokumentasi Reward & Punishment Pegawai:</strong> (<strong>ZI</strong>)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Group 4 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">4. Dokumen Layanan & Umpan Balik (Feedback)</h3>
+                            <p class="text-sm text-gray-600 mb-3">Menerjemahkan indikator seperti: "Analisis dan tindak lanjut pengukuran kepuasan...", "Dokumen pengaduan masyarakat...", "Beasiswa, Hibah...".</p>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>Laporan Survei Kepuasan (Mahasiswa/Layanan) & Analisis Tindak Lanjutnya:</strong> (<strong>ZI, AMI</strong>)</li>
+                                <li><strong>SOP Pengelolaan Pengaduan:</strong> (<strong>ZI, PPID</strong>)</li>
+                                <li><strong>Laporan/Rekaman Penanganan Pengaduan Masyarakat (termasuk status):</strong> (<strong>ZI, PPID</strong>)</li>
+                                <li><strong>Dokumen Informasi Layanan (Beasiswa, UKT, KIP):</strong> (<strong>PPID</strong> - sebagai Informasi Setiap Saat)</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Group 5 -->
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-800 border-b pb-2">5. Dokumen Tridharma (Spesifik AMI Prodi)</h3>
+                            <p class="text-sm text-gray-600 mb-3">Menerjemahkan indikator seperti: "Artikel Karya Ilmiah DTPS...", "Bentuk interaksi antara dosen, mahasiswa dan sumber belajar".</p>
+                            <ul class="list-disc list-inside space-y-2 pl-4">
+                                <li><strong>Rekapitulasi Publikasi Ilmiah Dosen & Bukti Sitasi:</strong> (<strong>AMI</strong> - Sarjana, Magister, Doktoral)</li>
+                                <li><strong>Jurnal Perkuliahan / Logbook / Bukti Aktivitas di LMS:</strong> (<strong>AMI</strong> - Sarjana, Magister, Doktoral, PPG)</li>
+                                <li><strong>Laporan PkM Dosen yang disitasi/dimanfaatkan:</strong> (<strong>AMI</strong>)</li>
                             </ul>
                         </div>
                     </div>
