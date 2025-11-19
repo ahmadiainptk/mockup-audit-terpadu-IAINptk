@@ -23,10 +23,10 @@ graph TD
     P1_1(1.0 Manajemen Master Data):::process
     P1_2(2.0 Buka Periode dan Distribusi Tugas):::process
 
-    Admin -->|Input Data Kriteria/Butir| P1_1
+    Admin -->|Input Data Kriteria atau Butir| P1_1
     P1_1 -->|Simpan Master| StoreInstrumen
     
-    Admin -->|Set Tahun & Target Unit| P1_2
+    Admin -->|Set Tahun dan Target Unit| P1_2
     StoreInstrumen -.->|Ambil Data Butir| P1_2
     P1_2 -->|Simpan Mapping Tugas| StorePeriode
 
@@ -35,12 +35,12 @@ graph TD
     P2_2(4.0 Verifikasi Dokumen):::process
 
     StorePeriode -.->|Notifikasi Tagihan| PIC
-    PIC -->|Upload File & Metadata| P2_1
+    PIC -->|Upload File dan Metadata| P2_1
     P2_1 -->|Simpan Draft| StoreEviden
     
     StoreEviden -.->|Notifikasi Menunggu Verval| Supervisor
     Supervisor -->|Review Kualitas| P2_2
-    P2_2 -->|Update Status: Disetujui/Revisi| StoreEviden
+    P2_2 -->|Update Status: Disetujui atau Revisi| StoreEviden
     P2_2 -.->|Jika Revisi| PIC
 
     %% --- PROCESS 3: PEMANFAATAN (AUDIT & SHARE) ---
@@ -49,16 +49,16 @@ graph TD
 
     %% Alur Peminjaman (Internal)
     UserLain -->|Request Dokumen Tertentu| P3_1
-    P3_1 -->|Cek Izin & Ketersediaan| StoreEviden
+    P3_1 -->|Cek Izin dan Ketersediaan| StoreEviden
     P3_1 -->|Catat Permohonan| StorePermohonan
     StorePermohonan -.->|Notifikasi Approval| PIC
     PIC -->|Approve Peminjaman| P3_1
     P3_1 -.->|Akses Download| UserLain
 
     %% Alur Audit (Eksternal)
-    Admin -->|Buat Akun Tamu (Expired)| Auditor
-    Auditor -->|Login & View Data| P3_2
-    P3_2 -->|Query Data Valid (Disetujui)| StoreEviden
+    Admin -->|Buat Akun Tamu Expired| Auditor
+    Auditor -->|Login dan View Data| P3_2
+    P3_2 -->|Query Data Valid Disetujui| StoreEviden
     P3_2 -->|Mapping ke Instrumen| StoreInstrumen
     P3_2 -.->|Tampilan Tree View| Auditor
 ```
