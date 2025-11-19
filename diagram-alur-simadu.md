@@ -3,29 +3,25 @@ graph TD
     %% --- STYLE DEFINITIONS ---
     classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:black;
     classDef process fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:black;
-    classDef store fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,stroke-dasharray: 5 5,color:black;
+    classDef store fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:black;
     classDef external fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:black;
 
     %% --- ENTITIES (ACTORS) ---
-    Admin((Super Admin /<br/>Gugus Mutu)):::actor
-    PIC((PIC Unit /<br/>Dosen)):::actor
-    Supervisor((Supervisor /<br/>Verifikator)):::actor
-    Auditor[Auditor Eksternal<br/>(Asesor)]:::external
-    UserLain[User Lain<br/>(Peminjam)]:::actor
+    Admin((Super Admin - Gugus Mutu)):::actor
+    PIC((PIC Unit - Dosen)):::actor
+    Supervisor((Supervisor - Verifikator)):::actor
+    Auditor[Auditor Eksternal - Asesor]:::external
+    UserLain[User Lain - Peminjam]:::actor
 
     %% --- DATA STORES (DATABASE TABLES) ---
-    subgraph Database [Penyimpanan Data]
-        StoreInstrumen[(DS1: Instrumen &<br/>Asesmen)]:::store
-        StorePeriode[(DS2: Periode &<br/>Penugasan)]:::store
-        StoreEviden[(DS3: Eviden &<br/>File Fisik)]:::store
-        StorePermohonan[(DS4: Permohonan<br/>Data)]:::store
-    end
+    StoreInstrumen[(DS1: Instrumen dan Asesmen)]:::store
+    StorePeriode[(DS2: Periode dan Penugasan)]:::store
+    StoreEviden[(DS3: Eviden dan File Fisik)]:::store
+    StorePermohonan[(DS4: Permohonan Data)]:::store
 
     %% --- PROCESS 1: PERENCANAAN (SETUP INSTRUMEN) ---
-    subgraph P1 [Proses 1: Setup & Penugasan]
-        P1_1(1.0 Manajemen Master Data):::process
-        P1_2(2.0 Buka Periode &<br/>Distribusi Tugas):::process
-    end
+    P1_1(1.0 Manajemen Master Data):::process
+    P1_2(2.0 Buka Periode dan Distribusi Tugas):::process
 
     Admin -->|Input Data Kriteria/Butir| P1_1
     P1_1 -->|Simpan Master| StoreInstrumen
@@ -35,10 +31,8 @@ graph TD
     P1_2 -->|Simpan Mapping Tugas| StorePeriode
 
     %% --- PROCESS 2: PELAKSANAAN (UPLOAD & VERVAL) ---
-    subgraph P2 [Proses 2: Pengumpulan & Validasi]
-        P2_1(3.0 Upload Eviden):::process
-        P2_2(4.0 Verifikasi Dokumen):::process
-    end
+    P2_1(3.0 Upload Eviden):::process
+    P2_2(4.0 Verifikasi Dokumen):::process
 
     StorePeriode -.->|Notifikasi Tagihan| PIC
     PIC -->|Upload File & Metadata| P2_1
@@ -50,10 +44,8 @@ graph TD
     P2_2 -.->|Jika Revisi| PIC
 
     %% --- PROCESS 3: PEMANFAATAN (AUDIT & SHARE) ---
-    subgraph P3 [Proses 3: Audit & Akses]
-        P3_1(5.0 Peminjaman Data):::process
-        P3_2(6.0 Dashboard Akreditasi):::process
-    end
+    P3_1(5.0 Peminjaman Data):::process
+    P3_2(6.0 Dashboard Akreditasi):::process
 
     %% Alur Peminjaman (Internal)
     UserLain -->|Request Dokumen Tertentu| P3_1
