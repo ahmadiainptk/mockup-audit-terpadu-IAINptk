@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMATA IAIN Pontianak Walkthroughs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom scrollbar for the sidebar */
+        .custom-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 3px;
+        }
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+        
+        /* Smooth fade in animation */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3b82f6;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800 font-sans h-screen flex flex-col overflow-hidden">
+
+    <!-- Top Header -->
+    <header class="bg-white border-b border-gray-200 h-16 flex-none flex items-center justify-between px-6 shadow-sm z-20">
+        <div class="flex items-center gap-3">
+            <div class="bg-emerald-600 text-white p-2 rounded-lg">
+                <i class="fa-solid fa-database"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-lg leading-tight text-slate-800">Panduan Aplikasi SIMATA</h1>
+                <p class="text-xs text-slate-500">Sistem Manajemen Data Terpadu - IAIN Pontianak</p>
+            </div>
+        </div>
+        <div class="hidden md:block text-sm text-gray-500">
+            <i class="fa-regular fa-clock mr-1"></i> Updated: Nov 2025
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+    </header>
+
+    <!-- Main Container -->
+    <div class="flex flex-1 overflow-hidden relative">
+        
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="w-full md:w-80 bg-white border-r border-gray-200 flex flex-col absolute md:relative h-full z-10 transform -translate-x-full md:translate-x-0 transition-transform duration-300 shadow-lg md:shadow-none">
+            <div class="p-4 border-b border-gray-100 bg-gray-50">
+                <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider">Daftar Modul Tutorial</h2>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto custom-scroll p-3 space-y-2" id="nav-container">
+                <!-- Nav items will be injected here by JS -->
+            </div>
+
+            <div class="p-4 border-t border-gray-200 text-center text-xs text-gray-400">
+                &copy; 2025 Tim IT SIMATA IAIN Pontianak
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="flex-1 flex flex-col h-full relative bg-slate-50 w-full">
+            <!-- Overlay for mobile sidebar -->
+            <div id="sidebar-overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-0 md:hidden"></div>
+
+            <div class="flex-1 overflow-y-auto p-4 md:p-8 relative" id="content-scroll-area">
+                
+                <!-- Header of Content -->
+                <div class="max-w-6xl mx-auto mb-6 fade-in">
+                    <h2 id="guide-title" class="text-2xl font-bold text-slate-800 mb-2">Pilih Panduan</h2>
+                    <p id="guide-desc" class="text-slate-600">Silakan pilih modul tutorial SIMATA dari menu di sebelah kiri untuk melihat panduan langkah demi langkah.</p>
+                </div>
+
+                <!-- Iframe Container -->
+                <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden min-h-[640px] relative fade-in">
+                    <!-- Loading Spinner -->
+                    <div id="loader" class="absolute inset-0 flex items-center justify-center bg-white z-10">
+                        <div class="loader"></div>
+                    </div>
+                    
+                    <!-- The Iframe -->
+                    <iframe 
+                        id="guide-frame"
+                        src="" 
+                        width="100%" 
+                        height="800" 
+                        allow="fullscreen" 
+                        style="border: 0; min-height: 640px; opacity: 0; transition: opacity 0.3s;"
+                        onload="hideLoader()"
+                    ></iframe>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // --- Data Configuration ---
+        const guides = [
+            {
+                id: 'request-data',
+                title: 'Request Data for Accreditation',
+                description: 'Panduan lengkap cara mengajukan permintaan data ke unit LP2M melalui SIMATA untuk keperluan akreditasi.',
+                icon: 'fa-file-contract',
+                url: 'https://scribehow.com/embed/How_to_Request_Data_from_LP2M_for_Accreditation__6oe53jz6RKq_n-xWvKzDBQ?as=scrollable'
+            },
+            {
+                id: 'upload-database',
+                title: 'Upload Database Pelayanan 2025',
+                description: 'Cara mengunggah database pelayanan ke dalam sistem SIMATA untuk periode tahun 2025.',
+                icon: 'fa-cloud-arrow-up',
+                url: 'https://scribehow.com/embed/Upload_Database_Pelayanan_LP2M_for_2025__R6E1hcguTKOTELDPigmKsA?as=scrollable'
+            },
+            {
+                id: 'approve-entry',
+                title: 'Approve Research Assistance Entry',
+                description: 'Langkah-langkah melakukan validasi dan persetujuan entri data bantuan penelitian di dashboard SIMATA.',
+                icon: 'fa-circle-check',
+                url: 'https://scribehow.com/embed/Approve_LP2M_Research_Assistance_Database_Entry__AW0Eb_UjQjGwj8RH9mLOmA?as=scrollable'
+            }
+        ];
+
+        // --- DOM Elements ---
+        const navContainer = document.getElementById('nav-container');
+        const guideTitle = document.getElementById('guide-title');
+        const guideDesc = document.getElementById('guide-desc');
+        const guideFrame = document.getElementById('guide-frame');
+        const loader = document.getElementById('loader');
+        const sidebar = document.getElementById('sidebar');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+        let currentActiveId = null;
+
+        // --- Initialization ---
+        function init() {
+            renderNav();
+            // Load the first guide by default
+            loadGuide(guides[0].id);
+        }
+
+        // --- Render Navigation ---
+        function renderNav() {
+            navContainer.innerHTML = '';
+            guides.forEach(guide => {
+                const btn = document.createElement('button');
+                btn.className = `w-full text-left p-3 rounded-lg flex items-start gap-3 transition-all duration-200 hover:bg-emerald-50 group focus:outline-none`;
+                btn.onclick = () => loadGuide(guide.id);
+                btn.id = `nav-${guide.id}`;
+                
+                btn.innerHTML = `
+                    <div class="mt-1 text-gray-400 group-hover:text-emerald-600 transition-colors icon-container">
+                        <i class="fa-solid ${guide.icon}"></i>
+                    </div>
+                    <div>
+                        <div class="font-medium text-sm text-slate-700 group-hover:text-emerald-700 nav-title">${guide.title}</div>
+                        <div class="text-xs text-slate-400 mt-0.5 truncate w-48 nav-desc">Klik untuk melihat</div>
+                    </div>
+                `;
+                navContainer.appendChild(btn);
+            });
+        }
+
+        // --- Load Guide Function ---
+        function loadGuide(id) {
+            if (currentActiveId === id) return;
+            
+            const guide = guides.find(g => g.id === id);
+            if (!guide) return;
+
+            // Update Active State in UI
+            if (currentActiveId) {
+                const prevBtn = document.getElementById(`nav-${currentActiveId}`);
+                if(prevBtn) {
+                    prevBtn.className = prevBtn.className.replace('bg-emerald-50 border-l-4 border-emerald-600 shadow-sm', 'hover:bg-emerald-50');
+                    prevBtn.querySelector('.icon-container').classList.remove('text-emerald-600');
+                    prevBtn.querySelector('.icon-container').classList.add('text-gray-400');
+                }
+            }
+
+            const activeBtn = document.getElementById(`nav-${id}`);
+            activeBtn.className = `w-full text-left p-3 rounded-lg flex items-start gap-3 transition-all duration-200 bg-emerald-50 border-l-4 border-emerald-600 shadow-sm focus:outline-none`;
+            activeBtn.querySelector('.icon-container').classList.remove('text-gray-400');
+            activeBtn.querySelector('.icon-container').classList.add('text-emerald-600');
+
+            currentActiveId = id;
+
+            // Show Loader
+            loader.style.display = 'flex';
+            guideFrame.style.opacity = '0';
+            
+            // Scroll top on mobile if needed
+            if(window.innerWidth < 768) {
+                 // Optional: scroll to top of content area
+            }
+
+            // Update Content Info
+            guideTitle.textContent = guide.title;
+            guideDesc.textContent = guide.description;
+
+            // Update Iframe
+            // We add a small delay to allow UI to update before iframe starts churning
+            setTimeout(() => {
+                guideFrame.src = guide.url;
+            }, 50);
+
+            // Close mobile menu if open
+            closeMobileMenu();
+        }
+
+        // --- Iframe Load Handler ---
+        function hideLoader() {
+            loader.style.display = 'none';
+            guideFrame.style.opacity = '1';
+        }
+
+        // --- Mobile Menu Logic ---
+        function toggleMobileMenu() {
+            const isClosed = sidebar.classList.contains('-translate-x-full');
+            if (isClosed) {
+                sidebar.classList.remove('-translate-x-full');
+                sidebarOverlay.classList.remove('hidden');
+            } else {
+                closeMobileMenu();
+            }
+        }
+
+        function closeMobileMenu() {
+            sidebar.classList.add('-translate-x-full');
+            sidebarOverlay.classList.add('hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+        sidebarOverlay.addEventListener('click', closeMobileMenu);
+
+        // Run
+        init();
+
+    </script>
+</body>
+</html>
